@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<h1>new repo</h1>
 <div class="m-4 ">
 <button class="btn btn-dark">test</button>
 <div class="form-check form-switch">
