@@ -19,7 +19,6 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 
 ### Premium Partners
 
-- **[CodGorilla](https://codegorilla.nl/)**
 - **[Tailwindcss](https://tailwindcomponents.com/)**
 
 

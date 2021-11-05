@@ -1,0 +1,1 @@
+<p>php artisan make:controller StaticPageController</p>

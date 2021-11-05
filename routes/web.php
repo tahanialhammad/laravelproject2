@@ -2,7 +2,7 @@
 
 use App\Models\Article;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\StaticPageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,3 +36,11 @@ Route::put('/articles/{article}', 'App\Http\Controllers\ArticlesController@updat
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//Start Laravel Project
+
+//Static Page
+Route::get(
+    '/info',
+    [StaticPageController::class, 'info']
+)->name('info');
