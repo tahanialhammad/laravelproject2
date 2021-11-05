@@ -7,7 +7,7 @@
     </aside>
 
     <section class="page-content" id="body-pd">
-            <div id="vue-rootv2">
+            <div id="app">
                 <div class="p-4">    
                     @include('user.partials.topbar')
                     @yield('content')

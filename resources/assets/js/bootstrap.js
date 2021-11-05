@@ -2,7 +2,13 @@ window._ = require('lodash');
 
 import "bootstrap";
 
-require('bootstrap');
+try {
+    window.Popper = require('@popperjs/core').default;
+    window.$ = window.jQuery = require('jquery');
+    window.bootstrap = require('bootstrap');
+
+} catch (e) {}
+
 
 window.axios = require('axios');
 
