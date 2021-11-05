@@ -1,0 +1,177 @@
+// $blue: rgb(190, 233, 34);
+// $primary:  rgb(228, 138, 21);
+// $theme-colors: (
+//   "primary":  $primary,
+//   "secondary":  rgb(243, 29, 225),
+//   "dark":      rgb(30, 68, 27)
+// );
+// /*not work*/
+// $border-radius: 10rem;
+// $form-check-input-bg: green;
+// $form-check-input-checked-bg: red;
+
+// $component-active-bg:pink;
+// $form-check-input-checked-bg-color: blueviolet;
+// $form-check-input-bg: orange;
+@import "node_modules/bootstrap/scss/bootstrap";
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+/* Upper bar */
+.upper-bar{
+    background-color: $prcolor;
+
+}
+
+
+.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
+    color: $secolor;}
+
+.navbar-light .navbar-brand{color: $secolor;}
+
+/* Main slider */
+.slider{
+    .carousel-inner{
+        h1{
+            position: absolute;
+            color: white;
+            z-index: 3;
+            max-width: 50%;
+            line-height: 1.5;
+            span{
+                background-color: $secolor;
+                padding:2px 10px;
+            }
+        }
+    }
+    .carousel-item{
+        max-height: 80vh;
+        overflow: hidden;
+        color: white;
+    }
+}
+
+.overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.6);
+    z-index: 2;
+}
+
+/* Features */
+.features{
+    i{
+        background-color: $secolor;
+        color: white;
+        margin-bottom: 10px;
+        height: 100px;
+        width: 100px;
+        line-height: 100px;
+    }
+    h3{color: $prcolor;}
+    p{
+        color: gray;
+        margin-bottom: 30px;
+    }
+}
+
+/* overview */
+.overview{
+    background-color: #f0f5f7;
+    h4{letter-spacing: 4px;}
+}
+
+.btn-primary{
+    background-color: $secolor;
+    border-radius: 0;
+    &:hover{  background-color: $prcolor;}
+}
+
+/* featured-work */
+.featured-work ul li {
+    color: $secolor;
+    border:2px solid $prcolor;
+    margin: 0 2px;
+    padding: 2px 20px;
+}
+.featured-work ul li.active , .featured-work ul li:hover {
+    background-color: $secolor;
+    border-color: $secolor;
+    a{color: white;}
+}
+
+.featured-work .Shuffle-imgs .row{margin: 0;}
+.featured-work .Shuffle-imgs .row .col-md{padding: 0;}
+.featured-work .row img{width: 100%;}
+
+/* All cards */
+.card-link{color: $secolor;}
+
+/* Choose-us */
+.choose-us .col-md-6{padding: 0;}
+.choose-us .col-md-6:last-child{background-color: $prcolor;}
+
+
+/* Testimonials */
+.testimonials{
+    background-image: url('https://images.unsplash.com/photo-1432821596592-e2c18b78144f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+    background-size: cover;
+    position: relative;
+    .container{
+        position: relative;
+        z-index: 3;
+    }
+}
+
+.testimonials .inner-item{position:relative; margin:100px 20px 20px;border-radius:20px;}
+.testimonials .carousel-item img{width:150px; border-radius:50%; position:absolute; top:-75px; left:50%; transform:translateX(-50%); }
+.testimonials .carousel-caption{position:relative; top:0; bottom:0; left:0; right:0; padding:100px 20px; z-index: 15;}
+
+/*Contact Us*/
+.contact-us{background: $secolor;}
+
+/* Button */
+.btn-outline-primary{
+    color: white; border-color: white;border-radius: 0;
+    &:hover{background-color: white; color: $secolor;}
+}
+
+/* Footer */
+footer{
+    a{
+        color: $prcolor;
+        &:hover{color: $secolor;}
+    }
+    .info a::before{
+        font-family: "FontAwesome";
+        content: "\f138";
+        display: inline-block;
+    }
+    .helpful-links ul li a::before{
+        font-family: "FontAwesome";
+        content: "\f054";
+        display: inline-block;
+    }
+}
+
+.copyright a {
+    margin-right: 1.5rem;
+}
+
+/* Article */
+.article{
+    a{
+    color: $secolor;
+    &:hover{color: $prcolor;}
+    }
+    h2{color: $prcolor;}
+}
