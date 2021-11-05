@@ -8,8 +8,8 @@
 
     <section class="page-content" id="body-pd">
             <div id="app">
+                @include('user.partials.topbar')
                 <div class="p-4">    
-                    @include('user.partials.topbar')
                     @yield('content')
                 </div>
             </div>

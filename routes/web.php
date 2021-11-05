@@ -3,6 +3,8 @@
 use App\Models\Article;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StaticPageController;
+use App\Http\Controllers\ArticlesController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,7 +28,7 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/articles', 'App\Http\Controllers\ArticlesController@index')->name('articles.index');
+// Route::get('/articles', 'App\Http\Controllers\ArticlesController@index')->name('articles.index');
 Route::post('/articles', 'App\Http\Controllers\ArticlesController@store');
 Route::get('/articles/create', [App\Http\Controllers\ArticlesController::class, 'create'])->middleware(['auth']);
 Route::get('/articles/{article}', 'App\Http\Controllers\ArticlesController@show')->name('articles.show');
@@ -38,6 +40,11 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //Start Laravel Project
+//Blog Articles
+Route::get(
+    '/articles',
+    [ArticlesController::class, 'index']
+)->name('user.articles.index');
 
 //Static Page
 Route::get(

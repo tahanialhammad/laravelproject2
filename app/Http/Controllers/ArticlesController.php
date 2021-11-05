@@ -16,17 +16,17 @@ class ArticlesController extends Controller
             $articles = Article::latest()->get();
         }
 
-        return view('articles.index', ['articles' => $articles]);
+        return view('user.articles.index', ['articles' => $articles]);
     }
 
     public function show(Article $article) //now we ask for an $article=this mast be the same name in wildcard in router/articles/{article} , oud was $id
     {
-        return view('articles.show', ['article' => $article]);
+        return view('user.articles.show', ['article' => $article]);
     }
 
     public function create()
     {
-        return view('articles.create', [
+        return view('user.articles.create', [
             'tags' => Tag::all(),
         ]);
     }
@@ -37,13 +37,13 @@ class ArticlesController extends Controller
         $article->user_id = auth()->id();
         $article->save();
         $article->tags()->attach(request('tags'));
-        return redirect(route('articles.index'));
+        return redirect(route('user.articles.index'));
     }
 
     public function edit(Article $article) //oud was $id
     {
         $this->authorize('update-article', $article);
-        return view('articles.edit', [
+        return view('user.articles.edit', [
             'article' => $article,
             'tags' => Tag::all(),
         ]);
