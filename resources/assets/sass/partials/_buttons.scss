@@ -1,0 +1,25 @@
+.btn{font-size: $font-size; padding-top: 12px; padding-bottom: 12px;margin-bottom: 0}
+.btn:disabled, .btn.disabled, fieldset:disabled .btn{
+  opacity: 1;
+  color: $secondary;
+  border-color: $secondary;
+}
+.btn-sm{font-size: $font-size-small;padding-top: 8px; padding-bottom: 8px;}
+
+.btn-light:hover{
+  color: white;
+  background-color: transparent!important;
+}
+
+// New xCore swtich
+.icon-xcore-swtich {
+  background-color: white;width: 15px; height: 15px; border-radius: 15px; margin:3px;
+  box-shadow: 0px 2px 5px 1px rgba(51,56,64,0.3);
+}
+.btn-toggle {
+  $btn-toggle-height: 23px;
+  background-color: $light;
+  width: 44px;
+  height: $btn-toggle-height;
+  &.active {background-color: $success;}
+}

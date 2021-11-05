@@ -1,0 +1,28 @@
+.app-table{
+  img{
+    height: 50px; width: 50px; border-radius: 10px;
+  }
+  td{padding-top: 15px; padding-bottom: 15px; cursor: pointer;}
+
+  //My-apps table to flex columns
+  border-bottom: 1px solid $light;
+  &:last-child{border-bottom: 0}
+  .row:last-child{.border-bottom{border-bottom: 0}}
+  .row{
+    &:hover{background-color:$bg-bodygrey;}
+  }
+}
+table {
+  td {font-size: $font-size-small;height: 20px;transition: 0.3s;}
+  tr:last-child td {
+    border-bottom: 0;
+  }
+}
+td, th{border-color: $color-mattewhite;}
+
+td:first-child,
+th:first-child {
+  border-radius: 10px 0 0 10px;
+}
+td:last-child,
+th:last-child {border-radius: 0 10px 10px 0;}

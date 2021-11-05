@@ -1,0 +1,78 @@
+.sweet-alert {
+  font-family: "Montserrat", sans-serif;
+  padding: 30px;
+  border-radius: 15px;
+
+  h2, p {
+    margin-top: 0;
+    color: $dark;
+  }
+
+  h2 {
+    font-weight: 700
+  }
+
+  p {
+    font-size: $font-size;
+    line-height: 1.7;
+    font-weight: 400;
+    margin-bottom: 40px;
+  }
+
+  button {
+    margin: 0px 0 0 10px;
+    border-radius: 50rem;
+    border: 2px solid $dark;
+    font-size: $font-size;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-weight: 700;
+    background-color: $dark;
+    box-shadow: none !important;
+
+    &.cancel {
+      background-color: transparent;
+      color: $dark;
+
+      &:hover {
+        background-color: transparent
+      }
+    }
+  }
+
+  &.swal-center {
+    text-align: center;
+
+    h2 {
+      margin-bottom: 40px;
+    }
+  }
+
+  &.swal-left {
+    .sa-button-container {
+      text-align: right;
+    }
+
+    h2, p {
+      text-align: left
+    }
+
+    h2 {
+      margin-bottom: 28px;
+    }
+  }
+}
+
+.alert{
+  a{text-decoration: underline;}
+}
+
+@media screen and (max-width: 768px) {
+  .sweet-alert {
+    text-align: center;
+
+    button {
+      margin-top: 20px
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.modal {
+  background-color: rgba(0,0,0,0.6);
+  .modal-content{border-radius: 15px;padding:20px}
+  .form-select{width: auto;}
+}
+@media screen and (min-width: 768px){
+  .modal {
+    .modal-content{
+      padding: 30px;
+      textarea {
+        resize: none;
+        min-height: 150px;
+      }
+    }
+    //.form-check-input {
+    //  width: 1.2rem;
+    //  height: 1.2rem;}
+  }
+}

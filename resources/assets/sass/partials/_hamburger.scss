@@ -1,0 +1,47 @@
+#header-toggle {
+  width: 18px;
+  height: 18px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+
+  span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: $color-darkgrey;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+    &:nth-child(1) {
+      top: 0px;
+      transform-origin: left center;
+    }
+    &:nth-child(2) {
+      top: 8px;
+      width: 14px ;
+      transform-origin: left center;
+    }
+    &:nth-child(3) {
+      top: 16px;
+      transform-origin: left center;
+    }
+  }
+}
+#header-toggle.open span{
+  &:nth-child(1) {
+    width: 20px;
+    transform: rotate(45deg);
+  }
+  &:nth-child(2) {
+    width: 0%;
+    opacity: 0;
+  }
+  &:nth-child(3) {
+    width: 20px;
+    transform: rotate(-45deg);
+    top: 14px;
+  }
+}

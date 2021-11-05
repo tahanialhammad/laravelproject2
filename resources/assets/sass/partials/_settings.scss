@@ -1,0 +1,63 @@
+//Sizes
+$sidebar-width: 250px;
+$sidebar-width-collapsed: 75px;
+$font-size: 14px;
+$font-size-small :13px;
+
+// Logos
+$Logo-URL-normaal-wit: "/images/logo-xcore-white.svg";
+$Logo-URL-klein-wit: "/images/logo-xcore-white-sm.svg";
+
+
+@mixin set_logo_and_size($logo-url)
+{
+  @if($logo-url == $Logo-URL-normaal-wit)
+  {
+    //margin-top: 27px;
+    margin-left: 14px;
+    height: 22px;
+    width:109px;
+    background-image: url($logo-url);
+    background-repeat: no-repeat;
+  }
+  @if($logo-url == $Logo-URL-klein-wit)
+  {
+    //margin-top: 20px;
+    margin-left:auto;
+    margin-right: auto;
+    height: 25px;
+    width:25px;
+    background-image: url($logo-url);
+    background-repeat: no-repeat;
+  }
+}
+//xCore class
+.fs-normal{font-size:$font-size;line-height: 1.7;font-weight: 400;}
+.fs-sm{font-size:$font-size-small;line-height: 1.6}
+.fs-xs{font-size:12px;line-height: 1.6}
+.bg-hidden{background-color:#86898e;}
+.border-15{ border-radius: 15px;}
+
+//Bootstrap overwrite colors
+.alert-warning {background-color:$color-yellow;}
+.badge {
+  padding: 5px 12px;
+}
+.text-muted{color: $color-lightgrey!important;}
+.rounded{ border-radius: 10px!important;}
+
+div{
+  /* SCROLLBAR
+  /* width */
+  ::-webkit-scrollbar {width: 6px; height: 3px;}
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #e4e6e6;
+    border-radius: 4px;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #31383d;
+    border-radius: 4px;
+  }
+}

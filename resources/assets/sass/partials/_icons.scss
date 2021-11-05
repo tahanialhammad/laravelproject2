@@ -1,0 +1,85 @@
+svg {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/* ICONS */
+.icon-xs{
+  width: 10px;
+  height: 10px;
+}
+.icon {
+  width: 13px;
+  //height: 13px;
+  //max-width: 13px;
+  display: inline-block;
+}
+.icon-faq{max-width: 13px;}
+.icon-md{
+  //height: 17px;
+  width: 17px;
+}
+.icon-lg{
+  height: 20px;
+  width: 20px;
+}
+.icon-xl{
+  //height: 25px;
+  //width: 25px;
+  max-width: 25px;
+}
+.icon-xxl {
+  //width: 40px;
+  width: 50px;
+  height: 40px;
+  //display: inline-block;
+
+}
+
+.icon-inverted {
+  fill: $color-white;
+}
+
+.icon-light {
+  fill: $color-lightgrey;
+}
+
+.icon-dark {
+  fill: $color-darkgrey;
+}
+.icon-rotate{  transform: rotate(180deg);}
+
+.icon-notice {
+  fill: $color-lightgrey;
+  width: 25px;
+  height: auto;
+}
+.icon-btn-next {
+  fill: $color-darkgrey;
+  width: 16px;
+  height: auto;
+  position: absolute;
+  margin: 18px 0 0 12px;
+}
+
+/* Notification-icon */
+.notification-icon {
+  position: relative;
+}
+
+.notification-icon .unread-notification {
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  border-radius: 8px;
+  background-color: $color-red;
+  position: absolute;
+  top: 8px;
+  left: 28px;
+}
+.link-danger .icon-dark{ fill: $color-red;}
+.link-success .icon-dark{ fill: $color-green;}
+.quick-options{
+  button.show{svg{ fill: $color-darkgrey;}}
+  .icon{max-width: 14px; max-height: 13px;}
+}

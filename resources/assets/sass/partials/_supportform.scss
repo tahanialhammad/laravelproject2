@@ -1,0 +1,29 @@
+/* Button used to open Support Form Vuejs*/
+.open-button {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 65px;
+  height: 65px;
+    .icon {width: 22px;}
+}
+
+/* Support Form */
+.support-popup {
+  .form-control, .form-select{font-size: $font-size-small;}
+  width: 90vw;
+  max-height: 700px;
+  position: fixed;
+  bottom: 100px;
+  right: 15px;
+  z-index: 10;
+  border-radius: 10px;
+  input, select{padding: 8px;}
+  textarea {
+    resize: none;
+    min-height: 150px;
+  }
+}
+@media screen and (min-width: 768px){
+  .support-popup { width: 460px;}
+}

@@ -1,0 +1,70 @@
+/* xcore Tooltip */
+.xcore-tooltip {
+  position: relative;
+  cursor: pointer;
+  display: inline;
+}
+
+.xcore-tooltip .xcore-tooltip-text {
+  visibility: hidden;
+  width: 300px;
+  background-color: $color-darkgrey;
+  color: $color-white;
+  text-align: left;
+  border-radius: 15px 15px 15px 0;
+  padding: 25px;
+  position: absolute;
+  z-index: 100;
+  bottom: 35px;
+  left: 7px;
+  opacity: 0;
+  transition: .3s;
+  transform: translate3d(0px, 15px, 0px);
+}
+
+.xcore-tooltip .xcore-tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 98%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 15px solid;
+  border-top-color: $color-darkgrey;
+  border-right: 15px solid transparent;
+}
+
+.xcore-tooltip:hover .xcore-tooltip-text {
+  visibility: visible;
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}
+
+.xcore-tooltip-text span {
+  margin: 0 0 18px 0;
+  padding: 0;
+  display: block;
+}
+
+.xcore-tooltip-text span:last-child {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+//Bootstrap tooltip
+.tooltip-inner {
+  text-align: left;
+  padding: 25px;
+}
+
+.tooltip {
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+}
+
+@media screen and (max-width: 400px) {
+  .tooltip-inner {
+    padding: 15px;
+}
+}

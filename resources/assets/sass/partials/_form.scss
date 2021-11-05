@@ -1,0 +1,67 @@
+.form-switch .form-check-input {
+  cursor: pointer;
+  background-color: $color-mattewhite;
+  border: 0;
+  width: 44px;
+  height: 22px;
+
+  &:checked {
+    background-color: $color-green !important;
+  }
+}
+
+form {
+  .form-control, .form-select {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: $font-size;
+  }
+
+  input[type=search] {
+    font-size: 18px;
+  }
+
+  .form-check-input {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  .form-select {
+    background-position: right 0.5rem center;
+  }
+
+  .has-error {
+    .form-control , .form-select, input[type=checkbox]{
+      border: 2px solid $danger;
+    }
+
+    span.error {
+      color: $danger;
+      font-size: 12px;
+    }
+  }
+}
+
+.form-sm {
+  .form-control, .form-select {
+    font-size: $font-size-small;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+.sync-filter {
+  .col-lg-2 {
+    padding: 0 1rem .5rem 0;
+  }
+
+  @media screen and (min-width: 990px) {
+    .w-220 {
+      max-width: 220px
+    }
+    .w-170 {
+      max-width: 170px
+    }
+  }
+}
+

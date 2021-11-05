@@ -1,0 +1,19 @@
+.card{
+  border-radius: 10px; border: 0;
+  .card-header{border-color: $light}
+  .card-text{
+    p:last-child, ul:last-child{margin-bottom: 0;}//need in Releases
+  }
+}
+.app-store{
+  //height: 75vh;
+  .card {border: 2px solid $color-white;
+    border-radius: 15px;transition: 0.5s;
+    &:hover{border: 2px solid $color-mattewhite;}
+    img {
+      height: 78px;
+      width: 78px;
+      border-radius: 15px;
+    }
+  }
+}

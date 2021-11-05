@@ -1,1 +1,38 @@
-h1{color: orange;}
+@import 'partials/bootstrapvariables';
+@import "~bootstrap/scss/bootstrap";
+
+@import 'partials/settings';
+@import 'partials/icons';
+@import 'partials/nav';
+@import 'partials/subnav';
+@import 'partials/hamburger';
+@import 'partials/topbar';
+@import 'partials/tooltip';
+@import 'partials/cards';
+@import 'partials/table';
+@import 'partials/modal';
+@import 'partials/form';
+@import 'partials/buttons';
+@import 'partials/supportform';
+@import 'partials/chart';
+@import 'partials/sweetalert';
+
+
+body{
+  font-size: $font-size;
+  line-height: 1.7;
+  font-family:  "Montserrat", sans-serif;
+  font-weight: 400;
+  color:  $dark;
+  background:$bg-bodygrey;
+}
+a{text-decoration: none;transition: 0.3s;}
+
+.xcore-truncate{
+  -webkit-line-clamp:3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  //text-overflow: ellipsis;
+}
+

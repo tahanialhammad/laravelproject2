@@ -1,0 +1,73 @@
+//Colors
+$color-red: #f2505b;
+$bg-bodygrey: #f4f6f8;
+$nav-component-active-bg: #42474f;
+$color-white: #ffffff;
+$color-darkgrey: #333840;
+$color-lightgrey: #b2b7be;
+$color-yellow: #fce3a6;
+$color-green: #1ddcbf;
+$color-mattewhite: #eaebed;
+$color-purple: #6476fc;
+
+//Bootstrap overwrite Theme colors
+$primary: $color-darkgrey;
+$secondary: $color-lightgrey;
+$success:$color-green;
+$info: $color-purple;
+$warning: $color-yellow;
+$danger:$color-red;
+$light: $color-mattewhite;
+$dark :$color-darkgrey;
+
+
+$theme-colors: (
+        "primary":    $primary,
+        "secondary":  $secondary,
+        "success":    $success,
+        "info":       $info,
+        "warning":    $warning,
+        "danger":     $danger,
+        "light":      $light,
+        "dark":       $dark
+);
+//Bootstrap overwrite Variables
+$table-hover-bg:#f4f6f8; //$bg-bodygrey
+$body-color: $dark;
+
+$input-border-color:$light;
+$input-border-width: 2px;
+$input-placeholder-color: $secondary;
+
+$form-check-input-border: 2px solid $light;
+$form-check-input-checked-bg-color:white;
+$form-check-input-checked-border-color:$dark;
+$form-check-input-checked-bg-image:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$dark}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/></svg>");
+$accordion-icon-width:0;
+
+$btn-close-color:   $dark;
+$btn-close-opacity: 1;
+$btn-close-hover-opacity:  1;
+$btn-close-focus-opacity:    1;
+
+$input-btn-focus-box-shadow: 0;
+$form-select-focus-box-shadow: 0;
+
+//Swich
+$form-switch-color: rgb(255, 255, 255) !default;
+$form-switch-checked-color:rgb(255, 255, 255) !default;
+$form-switch-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$form-switch-color}'/></svg>") !default;
+
+//$form-switch-focus-color:         $input-focus-border-color !default;
+$form-switch-focus-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$form-switch-color}' /></svg>") !default;
+
+//Tooltip
+$tooltip-font-size: 13px;
+$tooltip-max-width: 300px;
+$tooltip-color: $color-white;
+$tooltip-bg: $color-darkgrey;
+$tooltip-border-radius: 15px;
+$tooltip-opacity: 1;
+//$tooltip-padding-y: 25px;
+//$tooltip-padding-x: 25px;
+

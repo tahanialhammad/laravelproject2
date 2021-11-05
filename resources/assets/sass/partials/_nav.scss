@@ -1,0 +1,86 @@
+/*=====  Xcore sidebar =====*/
+
+/*=====  Xcore Logo =====*/
+.SidebarLogo{
+  @include set_logo_and_size($Logo-URL-klein-wit);
+}
+/*=====   .page-content =====*/
+.page-content{
+  transition: .5s;
+}
+
+/*===== SIDEBAR NAV =====*/
+aside{
+  position: fixed;
+  top: 0;
+  left: -30%;
+  width: $sidebar-width-collapsed;
+  padding-left: .75rem;
+  padding-right: .75rem;
+  transition: .5s;
+  & li:hover, & li.active{
+    background-color: $nav-component-active-bg;
+    border-radius: 15px;
+  }
+  nav ul li {margin-bottom: 10px;transition: 0.3s;
+    svg{margin-bottom: 3px;}
+  }
+  nav ul li span{display: none;}
+}
+
+/*Show navbar mobil*/
+aside.collapsed{
+  left: 0;
+  transition: .5s;
+}
+
+/*Add margin body mobil*/
+.body-pd{
+  margin-left: $sidebar-width-collapsed;
+  transition: .5s;
+}
+
+
+/* ===== MEDIA QUERIES=====*/
+@media screen and (min-width: 768px){
+  .page-content{
+    margin-left: $sidebar-width;
+    transition: .5s;
+  }
+  aside{
+    left: 0;
+    padding-left: 19px;
+    padding-right: 19px;
+    transition: .5s;
+    width: $sidebar-width;
+    nav ul li span{display: block;}
+    .SidebarLogo{
+      @include set_logo_and_size($Logo-URL-normaal-wit);
+    }
+  }
+
+  /*Show navbar desktop*/
+  aside.collapsed{
+    width: $sidebar-width-collapsed;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    transition: .5s;
+    nav ul li span{display: none;}
+    .SidebarLogo{
+      @include set_logo_and_size($Logo-URL-klein-wit);
+    }
+    .versionSwitch a{margin-left:  16px;}
+  }
+  /*Add padding body desktop*/
+  .body-pd{
+    margin-left: $sidebar-width-collapsed;
+    transition: .5s;
+  }
+}
+
+
+.versionSwitch{
+  a {background-color: $nav-component-active-bg;
+    margin-left:  19px;
+    &:hover{background-color: #2b3036;}}
+}

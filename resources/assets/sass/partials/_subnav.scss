@@ -1,0 +1,27 @@
+.subnav {
+  hr {
+    color:$secondary;/* it use theme color now */
+  }
+}
+.scrollmenu a {
+  display: inline-block;
+  color:$secondary;/* theme color */
+  /*text-align: center;*/
+  padding-bottom: 0.5rem;
+  margin-right: 14px;
+  font-weight: 700;
+  &:hover, &.active{
+    color: $dark;/*theme color */
+    border-bottom: 3px solid $color-red;
+    transition: .3s;
+  }
+  &:last-child{margin-right: 0;}
+}
+
+.dropdown{
+  .dropdown-menu{
+    li:first-child{ .dropdown-item{padding-top: 0}}
+    li:last-child{ .dropdown-item{padding-bottom: 0}}
+  }
+  .shadow-sm{box-shadow: 0 0 0.4rem rgb(51 56 64 / 8%) !important}
+}

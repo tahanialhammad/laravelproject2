@@ -11,7 +11,7 @@
 </head>
 <body>
     
-    <main id="app">
+    <main>
         @yield('main')
     </main>
 
