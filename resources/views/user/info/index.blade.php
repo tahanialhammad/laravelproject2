@@ -14,7 +14,9 @@
             <li>start leren Livewire</li>
             <li>php artisan livewire:make Counter <span>that wil creat class in http en view</span></li>
             <li>php artisan livewire:make ContactForm</li>
-            <li>php artisan make:livewire MultiStepForm</li>
+            <li>php artisan livewire:make SearchDropdown</li>
+            {{-- <li>php artisan make:livewire MultiStepForm</li> --}}
+        
         </ul>
     </div>
 </div>
