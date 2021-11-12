@@ -6,18 +6,29 @@
     <div>{{ $name }} this wil update wile we type</div>
     <p>we can debinde wire model and set tim , dan ajax request have dealy after stop type, or .lazy ==or== .defer</p>
     <p>prevent the defulat action van form submit (normal was mail function in controller see my old project laravel mail)and use then function/method (submitForm) in livewire class, we can use the same action in the rout </p>
-    <p>but in class method we need Mail, and function , i doent remper how can i doe that again 
+    <p>*****but in class method we need Mail, and function , i doent remper how can i doe that again 
         . i have copy files from git lab , but may be that must be in php artisan make mail ??? refrence my laravel-mail in github </p>
     <p>now we must rest reuest input filed in a method </p>
     <p>i must be using maitrap , and set it in .env </p>
     <p> php artisan make:mail ContactFormMailable</p>
     <p> then i wil make the view mail folder</p>
     <p>and it word , and i recive mail in mail trap</p>
+    <p>****now we are going to maik a flash message from livewire site ; in sesion hie we must check a session for success_meessage by </p>
+    <p>make flash message as a function if null , and we call $successMessage inplats van session</p>
+    <p>becouse flash message in tailwind so x close btn not word directy . we are going to make wire click with inline function to close flase message and set it to null, also ex in livewire site flashmessage , and make type to button </p>
+    <p>****Validation :::: befor get request , we call validation  method </p>
+    <p>make validation error meesage also from livewire site (real time validation ) we call this whene updet to input filed and we have to add rolls as a second argument in prop</p>
+    <p>****Loding spiner wile loding the page , now we are gong to change submit btn opacity after send email</p>
+    <p>and useing slep function 1 sec, then we see btn opacty , we can now add spiner design also from tailwind svg withanimaite class</p>
+    <p>butwe dont need to show this when typen , so we add target to show that only wehen wwhating esubmit respons (wire:target="submitForm")</p>
+
+
 
     <div>
         <form wire:submit.prevent="submitForm" action="/contact" method="POST" class="grid grid-cols-1 row-gap-6">
             @csrf
 
+            {{-- @if(session('success_message')) --}}
             @if ($successMessage)
             <div class="rounded-md bg-green-50 p-4 mt-8">
                 <div class="flex">
@@ -60,7 +71,10 @@
                         placeholder="Full name">
                 </div>
                 @error('name')
-                <p class="text-red-500 mt-1">{{ $message }}</p>
+                <p class="text-red-500 mt-1">
+                    {{-- {{ session('success_message') }} --}}
+                    {{ $message }}
+                </p>
                 @enderror
 
             </div>

@@ -22,24 +22,40 @@ class ContactForm extends Component
         'message' => 'required|min:5',
     ];
 
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
     public function submitForm()
     {
-        // $contact = $request->validate([
+  
+    //add varavible manulay without validation first
+    // by using validation we dont need that
+        // $contact['name'] = $this->name ;
+        // $contact['email'] = $this->email ;
+        // $contact['phone'] = $this->phone ;
+        // $contact['message'] = $this->message;
+
+        // now we call validietion
+        // $contact = $this->validate([
         //     'name' => 'required',
         //     'email' => 'required|email',
         //     'phone' => 'required',
         //     'message' => 'required',
         // ]);
-    //add varavible manulay without validation first
-        $contact['name'] = $this->name ;
-        $contact['email'] = $this->email ;
-        $contact['phone'] = $this->phone ;
-        $contact['message'] = $this->message;
 
+        // by using rul we ca do that
+        $contact = $this->validate();
+        sleep(1); // to see loding chaing in submit btn 1 sec
         Mail::to('tahanina2014@yahoo.com.com')->send(new ContactFormMailable($contact));
     
         //rest the form , by calling this method or function
         $this->resetForm();
+        // send falsh message 
+        // session()->flash('success_message', 'We received your message successfully and will get back to you shortly.');
+        $this->successMessage = 'We received your message successfully and will get back to you shortly!';
+
         // return back()->with('success_message', 'We received your message successfully and will get back to you shortly!');
 
         
