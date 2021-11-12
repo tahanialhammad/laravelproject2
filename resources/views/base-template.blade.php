@@ -7,14 +7,18 @@
     {{-- style --}}
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <title>Laravel project 2</title>
-    
+    {{-- LiveWire css  --}}
+    @livewireStyles
+    {{--OR <livewire:styles /> --}}
 </head>
 <body>
     
     <main>
         @yield('main')
     </main>
-
+  {{-- LiveWire js --}}
+   @livewireScripts
+   {{-- OR <livewire:scripts /> --}}
     {{-- Scripts  --}}
    <script src="{{ asset('js/app.js') }}"></script>
 </body>

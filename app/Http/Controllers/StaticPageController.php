@@ -10,4 +10,9 @@ class StaticPageController extends Controller
     {
         return view('user.info.index');
     }
+
+    public function livewirecomp()
+    {
+        return view('user.livewirecomp.index');
+    }
 }

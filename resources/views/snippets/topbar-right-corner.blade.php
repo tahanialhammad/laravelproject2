@@ -1,6 +1,10 @@
 <div>
     <div class="d-flex align-items-center">
-    <div>first_name last_name </div>
+        @auth
+            <div>  {{ Auth::user()->name }}</div> 
+        @else
+            <div>Account</div>
+        @endauth
     <div class="dropdown">
         <button class="btn btn-link p-0 ms-3 shadow-none" type="button" id="moreDropdownMenu" data-bs-toggle="dropdown" aria-expanded="false">
             <svg id="icon-info" class="icon-lg icon-dark" viewBox="0 0 13 13">
@@ -8,19 +12,38 @@
                 <path d="M6.5 1.2c2.9 0 5.2 2.4 5.2 5.2s-2.4 5.2-5.2 5.2-5.3-2.2-5.3-5.1 2.4-5.3 5.3-5.3m0-1.2C2.9 0 0 2.9 0 6.5S2.9 13 6.5 13 13 10.1 13 6.5 10.1 0 6.5 0z"/>
             </svg>
         </button>
-        <ul class="dropdown-menu border-0 shadow-sm p-4 mt-2 mb-5 bg-body fs-sm" aria-labelledby="moreDropdownMenu" style="width: 220px">
-            <li><a class="dropdown-item p-0 pb-1"  href="{{ url('/logout') }}" data-method="post">
-                    {{ trans('menu.sign_out') }}
+
+          <!-- Right Side Of Navbar -->
+          <ul class="dropdown-menu border-0 shadow-sm p-4 mt-2 mb-5 bg-body fs-sm" aria-labelledby="moreDropdownMenu" style="width: 220px">
+            @guest
+            @if (Route::has('login'))
+            <li>
+                <a class="dropdown-item px-0 py-1" href="{{ route('login') }}">{{ __('Login') }}</a>
+            </li>
+            @endif
+
+            @if (Route::has('register'))
+            <li>
+                <a class="dropdown-item px-0 py-1" href="{{ route('register') }}">{{ __('Register') }}</a>
+            </li>
+            @endif
+            @else
+            <li>
+                <a class="dropdown-item px-0 py-1" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    {{ Auth::user()->name }}
                 </a>
             </li>
-            <li><a class="dropdown-item px-0 py-1"  href=""> {{ trans('xcorev2.settings') }}</a></li>
-            <li><hr class="dropdown-divider bg-light"></li>
+
             <li>
-                <a href=""
-                   data-method="put" class="dropdown-item link-dark d-inline ps-0 pb-0">NL</a> |
-                <a href=""
-                   data-method="put" class="dropdown-item link-dark d-inline pb-0">EN</a>
+                <a class="dropdown-item px-0 py-1" href="{{ route('logout') }}" onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">
+                    {{ __('Logout') }}
+                </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+            </form>
             </li>
+            @endguest
         </ul>
     </div>
     </div>

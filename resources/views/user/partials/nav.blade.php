@@ -63,7 +63,7 @@
             </li>
 
             <li class="nav-item ">
-                <a class="nav-link d-flex align-items-center text-white" href="">
+                <a class="nav-link d-flex align-items-center text-white" href="{{ route('info')}}">
                     <svg id="icon-info" class="icon icon-inverted" viewBox="0 0 13 13">
                         <path d="M6.5 8.3c.4 0-.7.3-.7.7 0 .4.3.7.7.7.4 0 .7-.3.7-.7 0-.4-.3-.7-.7-.7zm.1-5.1c-1.3 0-2 .8-2.1 2.1h1.1c0-.6.3-.9.8-.9s.8.2.8.7C7.2 6 6 5.9 6 7.4h1.1c0-1.2 1.5-1.2 1.5-2.6-.1-1.1-.8-1.6-2-1.6z"/>
                         <path d="M6.5 1.2c2.9 0 5.2 2.4 5.2 5.2s-2.4 5.2-5.2 5.2-5.3-2.2-5.3-5.1 2.4-5.3 5.3-5.3m0-1.2C2.9 0 0 2.9 0 6.5S2.9 13 6.5 13 13 10.1 13 6.5 10.1 0 6.5 0z"/>
@@ -75,12 +75,12 @@
           
             <li class="nav-item ">
                 <a class="nav-link d-flex align-items-center text-white notification-icon"
-                   href="">
+                   href="{{route('livewirecomp')}}">
                     <svg id="icon-account" class="icon icon-inverted" viewBox="0 0 10 11.9">
                         <path d="M5 1.3c1 0 1.7.7 1.7 1.7S6 4.8 5 4.8 3.2 4 3.2 3 4 1.3 5 1.3M5 0C3.3 0 2 1.3 2 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm5 11.9H8.7V9.5c0-.8-.6-1.4-1.4-1.4H2.6c-.8 0-1.4.6-1.4 1.4v2.4H0V9.5C0 8 1.2 6.9 2.6 6.9h4.7C8.8 6.9 10 8 10 9.5v2.4z"/>
                     </svg>
 
-                    <span class="ps-3">account</span>
+                    <span class="ps-3">livewirecomp</span>
                 </a>
             </li>
 

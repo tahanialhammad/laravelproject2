@@ -51,3 +51,8 @@ Route::get(
     '/info',
     [StaticPageController::class, 'info']
 )->name('info');
+
+Route::get(
+    '/livewirecomp',
+    [StaticPageController::class, 'livewirecomp']
+)->name('livewirecomp');

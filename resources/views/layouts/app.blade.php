@@ -30,6 +30,8 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/new.css') }}" rel="stylesheet">
+    <!-- LiveWire css -->
+    @livewireStyles
 </head>
 
 <body>
@@ -47,6 +49,9 @@
     <div>@include('layouts.footer')</div>
     @yield('scripts')
 </div>
+
+    <!-- LiveWire js -->
+    @livewireScripts
 </body>
 
 </html>
