@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Article;
 
 class StaticPageController extends Controller
 {
@@ -13,6 +14,8 @@ class StaticPageController extends Controller
 
     public function livewirecomp()
     {
-        return view('user.livewirecomp.index');
+        $articles = Article::latest()->get();
+
+        return view('user.livewirecomp.index', compact('articles'));
     }
 }

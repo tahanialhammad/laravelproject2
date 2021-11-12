@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Article;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StaticPageController;
 use App\Http\Controllers\ArticlesController;
@@ -18,7 +19,9 @@ use App\Http\Controllers\ArticlesController;
 
 Route::get('/', function () {
       return view('welcome',[
-          'articles'=> App\Models\Article::take(3)->latest()->get()
+          'articles'=> App\Models\Article::take(3)->latest()->get(),
+        //   'users' => User::all(),
+        'users' => User::paginate(2),
       ]);
   });
 
@@ -57,7 +60,8 @@ Route::get(
     '/livewirecomp',
     [StaticPageController::class, 'livewirecomp']
 )->name('livewirecomp');
-//contact form
+
+//contact form in blade dont needed
 Route::post('/contact', function (Request $request) {
     $contact = $request->validate([
         'name' => 'required',
