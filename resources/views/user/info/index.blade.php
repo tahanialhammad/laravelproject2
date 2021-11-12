@@ -12,6 +12,8 @@
             <li> composer require livewire/livewire</li>
             <li>include css en js in base-template file</li>
             <li>start leren Livewire</li>
+            <li>php artisan livewire:make Counter <span>that wil creat class in http en view</span></li>
+            <li>php artisan livewire:make ContactForm</li>
             <li>php artisan make:livewire MultiStepForm</li>
         </ul>
     </div>

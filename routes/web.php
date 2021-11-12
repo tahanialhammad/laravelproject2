@@ -52,7 +52,21 @@ Route::get(
     [StaticPageController::class, 'info']
 )->name('info');
 
+//livewire
 Route::get(
     '/livewirecomp',
     [StaticPageController::class, 'livewirecomp']
 )->name('livewirecomp');
+//contact form
+Route::post('/contact', function (Request $request) {
+    $contact = $request->validate([
+        'name' => 'required',
+        'email' => 'required|email',
+        'phone' => 'required',
+        'message' => 'required',
+    ]);
+
+    Mail::to('tahanina2014@yahoo.com.com')->send(new ContactFormMailable($contact));
+
+    return back()->with('success_message', 'We received your message successfully and will get back to you shortly!');
+});
