@@ -74,3 +74,10 @@ Route::post('/contact', function (Request $request) {
 
     return back()->with('success_message', 'We received your message successfully and will get back to you shortly!');
 });
+
+
+//Vue
+Route::get(
+    '/vuejs',
+    [StaticPageController::class, 'vuejs']
+)->name('vuejs');

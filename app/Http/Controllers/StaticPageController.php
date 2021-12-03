@@ -12,6 +12,11 @@ class StaticPageController extends Controller
         return view('user.info.index');
     }
 
+    public function vuejs()
+    {
+        return view('user.vuejs.index');
+    }
+
     public function livewirecomp()
     {
         $articles = Article::paginate(3);

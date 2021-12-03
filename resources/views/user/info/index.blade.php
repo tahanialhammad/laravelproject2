@@ -21,6 +21,11 @@
             {{-- <li>php artisan make:livewire MultiStepForm</li> --}}
         
         </ul>
+        <h3>stop from Livewire: last les is 5</h3>
+        <h3>returen to vuejs</h3>
+        <ul>
+            <li></li>
+        </ul>
     </div>
 </div>
 @stop
