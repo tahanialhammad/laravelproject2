@@ -17,6 +17,7 @@
             <li> php artisan make:mail ContactFormMailable</li>
             <li>php artisan livewire:make SearchDropdown</li>
             <li>Pagination</li>
+            <li>php artisan livewire:make DataTables</li>
             {{-- <li>php artisan make:livewire MultiStepForm</li> --}}
         
         </ul>

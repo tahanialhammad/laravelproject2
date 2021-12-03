@@ -16,13 +16,9 @@
 <p>https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/SearchExamples.html#//apple_ref/doc/uid/TP40017632-CH6-SW1</p>
 <livewire:search-dropdown/>
 <hr>
-<h3>Pagination</h3>
+<h3>Pagination les 5</h3>
 <p>pagination in laravel is by User::paginate(2), i have this in welcome blade and route and in view use links to show paginat </p>
 <p>but when go to next page it will load all page from top , and we need scrolling. that is easy in live wire </p>
-<ul>
-    @foreach ($articles as $article)
-    <li>{{ $article->title }}</li>
-    @endforeach
-</ul>
-
+<p>but we need to pass varablet to class livewire , and with pagination code</p>
+<livewire:data-tables/>
 @stop

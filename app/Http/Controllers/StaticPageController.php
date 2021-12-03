@@ -14,7 +14,8 @@ class StaticPageController extends Controller
 
     public function livewirecomp()
     {
-        $articles = Article::latest()->get();
+        $articles = Article::paginate(3);
+        
 
         return view('user.livewirecomp.index', compact('articles'));
     }
