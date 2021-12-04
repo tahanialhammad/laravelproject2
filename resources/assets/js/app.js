@@ -11,6 +11,8 @@ import Info from "./components/Info";
 import Les1 from "./components/learnvue2/Les1.vue";
 import Les3 from "./components/learnvue2/Les3.vue"; //les 3, 4
 import Les5 from "./components/learnvue2/Les5.vue";
+import Les6 from "./components/learnvue2/Les6.vue";
+import Les7 from "./components/learnvue2/Les7.vue";
 
 
 
@@ -21,6 +23,8 @@ Vue.component('info', Info);
 Vue.component('les1', Les1);
 Vue.component('les3', Les3);
 Vue.component('les5', Les5);
+Vue.component('les6', Les6);
+Vue.component('les7', Les7);
 
 
 
