@@ -15,7 +15,12 @@
     <hr>
     <les6></les6>
     <hr>
-    <les7></les7>
+    <les7>slot tekest 1</les7>
+    <les7>slot tekest 2</les7>
+    <hr>
+    <les9 title="pass title prop" body="pas body text prop to message template"></les9>
+    <hr>
+    <les10></les10>
 </div>
 @stop
 

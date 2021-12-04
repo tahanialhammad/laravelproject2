@@ -13,6 +13,8 @@ import Les3 from "./components/learnvue2/Les3.vue"; //les 3, 4
 import Les5 from "./components/learnvue2/Les5.vue";
 import Les6 from "./components/learnvue2/Les6.vue";
 import Les7 from "./components/learnvue2/Les7.vue";
+import Les9 from "./components/learnvue2/Les9.vue";
+import Les10 from "./components/learnvue2/Les10.vue";
 
 
 
@@ -25,7 +27,8 @@ Vue.component('les3', Les3);
 Vue.component('les5', Les5);
 Vue.component('les6', Les6);
 Vue.component('les7', Les7);
-
+Vue.component('les9', Les9);
+Vue.component('les10', Les10);
 
 
 window.Vue = require('vue').default;

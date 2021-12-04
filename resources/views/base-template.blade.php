@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {{-- Tailwind cdn  --}}
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-
+{{-- bulma cdn --}}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     {{-- style --}}
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <title>Laravel project 2</title>
