@@ -23,9 +23,10 @@
     <h3>modal</h3>
     <les10 v-if="showModal" @close="showModal = false">any text to the solt</les10>
     <button @click="showModal= true" class="btn btn-secondary">show modal</button>
+   
     <hr>
     <h3>Les 11 : tabs</h3>
-    <p>https://gist.github.com/JeffreyWay</p>
+    <p>https://gist.github.com/JeffreyWay/f844ca4dd1887d566759849665068162</p>
     <tabs>
         <tab name="About Us" :selected="true">
             <h1>Here is the content for the about us tab.</h1>
@@ -39,6 +40,12 @@
             <h1>Here is the content for the about our vision tab.</h1>
         </tab>
     </tabs>
+    
+    <hr>
+    <h3>Les 12 :Component Communication Example #1: Custom Events</h3>
+    {{-- <coupon v-on:applied="onCouponApplied"></coupon> --}}
+    <coupon @applied="onCouponApplied"></coupon>
+<h1 v-if="couponApplied">resut of usung coupon : you use a coupon</h1>
 </div>
 @stop
 
