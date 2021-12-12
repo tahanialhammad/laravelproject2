@@ -20,7 +20,12 @@
     <hr>
     <les9 title="pass title prop" body="pas body text prop to message template"></les9>
     <hr>
-    <les10></les10>
+    <h3>modal</h3>
+    <les10 v-if="showModal" @close="showModal = false">any text to the solt</les10>
+    <button @click="showModal= true" class="btn btn-secondary">show modal</button>
+    <hr>
+    <h3>tabs</h3>
+    <les11></les11>
 </div>
 @stop
 

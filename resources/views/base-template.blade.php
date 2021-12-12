@@ -25,5 +25,36 @@
    {{-- OR <livewire:scripts /> --}}
     {{-- Scripts  --}}
    <script src="{{ asset('js/app.js') }}"></script>
+
+   <!-- ========== START NEW XCORE :Enable Bootstrap tooltips =========== -->
+<script>
+    let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+
+
+
+    // let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    // let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    //
+    //     new bootstrap.Tooltip(tooltipTriggerEl,{ trigger: 'manual' });
+    //
+    //     $(tooltipTriggerEl).on("mouseenter", function () {
+    //         let _this = this;
+    //         $(this).tooltip("show");
+    //         $(".bs-tooltip-start").on("mouseleave", function () {
+    //             $(_this).tooltip('hide');
+    //         });
+    //     }).on("mouseleave", function () {
+    //         let _this = this;
+    //         setTimeout(function () {
+    //             if (!$(".bs-tooltip-start:hover").length) {
+    //                 $(_this).tooltip("hide");
+    //             }
+    //         }, 300);
+    //     });
+    // });
 </body>
 </html>

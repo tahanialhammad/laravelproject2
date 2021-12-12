@@ -15,7 +15,7 @@ import Les6 from "./components/learnvue2/Les6.vue";
 import Les7 from "./components/learnvue2/Les7.vue";
 import Les9 from "./components/learnvue2/Les9.vue";
 import Les10 from "./components/learnvue2/Les10.vue";
-
+import Les11 from "./components/learnvue2/Les11.vue";
 
 
 
@@ -29,7 +29,7 @@ Vue.component('les6', Les6);
 Vue.component('les7', Les7);
 Vue.component('les9', Les9);
 Vue.component('les10', Les10);
-
+Vue.component('les11', Les11);
 
 window.Vue = require('vue').default;
 

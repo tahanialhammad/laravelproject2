@@ -21,7 +21,14 @@ class StaticPageController extends Controller
     {
         $articles = Article::paginate(3);
         
-
+       
         return view('user.livewirecomp.index', compact('articles'));
     }
+
+    public function mytooltip()
+    {
+        return view('user.mytooltip.index');
+    }
+
+    
 }

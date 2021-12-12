@@ -50,7 +50,7 @@
 
             <li class="nav-item ">
                 <a class="nav-link d-flex align-items-center text-white notification-icon"
-                   href="">
+                   href="{{ route('mytooltip')}}">
                     <svg id="icon-talk" class="icon icon-inverted" viewBox="0 0 11.86 11.86">
                         <path d="M9.86 1.25c.41 0 .75.34.75.75v5.47c0 .41-.34.75-.75.75H4.25l-.28.14-2.72 1.43V2c0-.41.34-.75.75-.75h7.86m0-1.25H2C.9 0 0 .9 0 2v9.86l4.55-2.39h5.31c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/>
                     </svg>

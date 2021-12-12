@@ -55,6 +55,13 @@ Route::get(
     [StaticPageController::class, 'info']
 )->name('info');
 
+//tooltip
+Route::get(
+    '/mytooltip',
+    [StaticPageController::class, 'mytooltip']
+)->name('mytooltip');
+
+
 //livewire
 Route::get(
     '/livewirecomp',
