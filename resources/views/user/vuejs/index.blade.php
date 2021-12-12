@@ -24,8 +24,21 @@
     <les10 v-if="showModal" @close="showModal = false">any text to the solt</les10>
     <button @click="showModal= true" class="btn btn-secondary">show modal</button>
     <hr>
-    <h3>tabs</h3>
-    <les11></les11>
+    <h3>Les 11 : tabs</h3>
+    <p>https://gist.github.com/JeffreyWay</p>
+    <tabs>
+        <tab name="About Us" :selected="true">
+            <h1>Here is the content for the about us tab.</h1>
+        </tab>
+
+        <tab name="About Our Culture">
+            <h1>Here is the content for the about our culture tab.</h1>
+        </tab>
+
+        <tab name="About Our Vision">
+            <h1>Here is the content for the about our vision tab.</h1>
+        </tab>
+    </tabs>
 </div>
 @stop
 
