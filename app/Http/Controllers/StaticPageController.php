@@ -30,5 +30,33 @@ class StaticPageController extends Controller
         return view('user.mytooltip.index');
     }
 
-    
+    //test wizard option
+    public function showOption()
+    {
+        return view('user.wizard.index'); 
+    }
+
+    public function createoption(Request $request)
+    {
+    //dd(request()->all());
+
+    $option =request()["option"];
+    //dd($option);
+
+        if ( $option == 'service'){
+            return redirect(route('serviceoption'));
+        }
+        return redirect(route('wizardoption'));
+    }
+
+    public function serviceoption()
+    {
+        return view('user.wizard.serviceoption'); 
+    }
+
+    public function wizardoption()
+    {
+        return view('user.wizard.wizardoption'); 
+    }
+ 
 }

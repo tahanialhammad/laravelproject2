@@ -21,4 +21,9 @@
 <p>but when go to next page it will load all page from top , and we need scrolling. that is easy in live wire </p>
 <p>but we need to pass varablet to class livewire , and with pagination code</p>
 <livewire:data-tables/>
+<hr>
+<h3>livewire load more pagination from youtub https://www.youtube.com/watch?v=EgjNDZxnJEU</h3>
+<p>php artisan livewire:make LoadMore</p>
+<livewire:load-more/>
+
 @stop

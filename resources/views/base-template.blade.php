@@ -34,13 +34,11 @@
     })
 
 
-
-
     // let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
     // let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-    //
+    
     //     new bootstrap.Tooltip(tooltipTriggerEl,{ trigger: 'manual' });
-    //
+    
     //     $(tooltipTriggerEl).on("mouseenter", function () {
     //         let _this = this;
     //         $(this).tooltip("show");
@@ -56,5 +54,7 @@
     //         }, 300);
     //     });
     // });
+
+    </script>
 </body>
 </html>

@@ -20,7 +20,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link d-flex align-items-center text-white" href="">
+                <a class="nav-link d-flex align-items-center text-white" href="{{ route('wizard')}}">
                     <svg id="icon-apps" class="icon icon-inverted" viewBox="0 0 11.9 11.9">
                         <path d="M4.1 1.3v2.8H1.3V1.3h2.8M4.3 0H1C.5 0 0 .5 0 1v3.3c0 .5.5 1 1 1h3.3c.5 0 1-.5 1-1V1c0-.5-.4-1-1-1zm6.3 7.8v2.8H7.8V7.8h2.8m.3-1.3H7.5c-.5 0-1 .4-1 1v3.3c0 .6.5 1 1 1h3.3c.5 0 1-.4 1-1V7.5c.1-.5-.4-1-.9-1zm-.3-5.2v2.8H7.8V1.3h2.8m.3-1.3H7.5c-.5 0-1 .5-1 1v3.3c0 .5.5 1 1 1h3.3c.5 0 1-.5 1-1V1c.1-.5-.4-1-.9-1zM4.1 7.8v2.8H1.3V7.8h2.8m.2-1.3H1c-.5 0-1 .4-1 1v3.3c0 .6.5 1 1 1h3.3c.5 0 1-.4 1-1V7.5c0-.5-.4-1-1-1z"
                               class="st0"/>
@@ -76,9 +76,9 @@
             <li class="nav-item ">
                 <a class="nav-link d-flex align-items-center text-white notification-icon"
                    href="{{route('livewirecomp')}}">
-                    <svg id="icon-account" class="icon icon-inverted" viewBox="0 0 10 11.9">
-                        <path d="M5 1.3c1 0 1.7.7 1.7 1.7S6 4.8 5 4.8 3.2 4 3.2 3 4 1.3 5 1.3M5 0C3.3 0 2 1.3 2 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm5 11.9H8.7V9.5c0-.8-.6-1.4-1.4-1.4H2.6c-.8 0-1.4.6-1.4 1.4v2.4H0V9.5C0 8 1.2 6.9 2.6 6.9h4.7C8.8 6.9 10 8 10 9.5v2.4z"/>
-                    </svg>
+                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z" clip-rule="evenodd" />
+                  </svg>
 
                     <span class="ps-3">livewirecomp</span>
                 </a>
@@ -94,6 +94,15 @@
                 </a>
             </li>
 
+            <li class="nav-item ">
+                <a class="nav-link d-flex align-items-center text-white" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    <span class="ps-3">SVG Icon</span>
+                    {{-- https://heroicons.com/ --}}
+                </a>
+            </li>
         </ul>
 
     </div>

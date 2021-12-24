@@ -88,3 +88,13 @@ Route::get(
     '/vuejs',
     [StaticPageController::class, 'vuejs']
 )->name('vuejs');
+
+
+//wizard option 
+Route::get('wizard', [StaticPageController::class, 'showOption'])->name('wizard');
+Route::post('createoption', [StaticPageController::class, 'createoption'])->name('createoption');
+
+Route::get('serviceoption', [StaticPageController::class, 'serviceoption'])->name('serviceoption');
+Route::get('wizardoption', [StaticPageController::class, 'wizardoption'])->name('wizardoption');
+
+ 
