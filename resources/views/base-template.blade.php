@@ -16,8 +16,20 @@
     {{--OR <livewire:styles /> --}}
 </head>
 <body>
-    
+    {{-- svg loader  --}}
+    {{-- <div class="loader">
+        <img src="{{ asset('images/grid.svg')}}" alt="">
+    </div> --}}
+
+  
     <main>
+        <div class="loader-wrapper">
+            <div class="progress">
+                <div class="color"></div>
+            </div>
+        </div>
+    
+        
         @yield('main')
     </main>
   {{-- LiveWire js --}}
@@ -55,6 +67,49 @@
     //     });
     // });
 
+
+
+//load more ajax
+function loadMoreData(page)
+{
+    $.ajax({
+        url: '?page=' + page,
+        type: 'get',
+        beforeSend : function ()
+        {
+            $(".ajax-loader").show();
+        }
+    })
+    .done(function(data){
+        if(data.html == ' '){
+            $(".ajax-loader").html('No more data');
+            return;
+        }
+        $(".ajax-loader").hide();
+        $(".post-data").append(data.html);
+    })
+    .fail(function(jqXHR, ajaxOptions, thrownError){
+        alert('server not responding...');
+    })
+}
+
+let page = 1;
+$(window).scroll(function(){
+    if($(window).scrollTop() + $(window).height() >= $(document).height() ){
+        page ++;
+        loadMoreData(page);
+    }
+})
+
+    </script>
+
+    {{-- loader script --}}
+    <script>
+        $(function(){
+            setTimeout(() => {
+               $('.loader-wrapper').fadeOut(500);
+            }, 1000);
+        })
     </script>
 </body>
 </html>

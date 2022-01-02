@@ -2,6 +2,9 @@
 
 @section('content')
 
+
+<livewire:load-more/>
+<hr>
 <a href="/articles/create" class="btn btn-primary">create new article</a>
 <!-- Start Article -->
 <div class="container card-group article">

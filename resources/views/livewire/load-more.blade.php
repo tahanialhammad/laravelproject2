@@ -5,6 +5,7 @@
         <li>{{ $user->name}}</li>
     @endforeach
 
-    <a wire:click="loadmore">load more</a>
+    <a wire:click="loadmore" class="btn btn-info">load more</a>
 </ul>
 </div>
+composer update vendor/livewire

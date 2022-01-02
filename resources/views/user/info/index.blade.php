@@ -22,9 +22,18 @@
         <li>livewire load more pagination from youtub https://www.youtube.com/watch?v=EgjNDZxnJEU</li>
         </ul>
         <h3>stop from Livewire: last les is 5</h3>
+        <hr>
+
         <h3>returen to vuejs</h3>
         <ul>
             <li></li>
+        </ul>
+        <hr>
+
+        <h3>Ajax</h3>
+        <ul>
+          <li>Loadmore posts with Ajax </li>
+          <li>php artisan make:controller LoadMoreController</li>
         </ul>
     </div>
 
@@ -44,4 +53,7 @@
   </div>
 </div>
 </div>
+
+
+
 @stop

@@ -58,5 +58,17 @@ class StaticPageController extends Controller
     {
         return view('user.wizard.wizardoption'); 
     }
+
+    public function loadmore(Request $request)
+    {
+        $articles = Article::paginate(3);
+
+        if($request->ajax()){
+            $view = view('data', compact('articles'))->render();
+            return response()->json(['ntml' => $view]);
+        }
+        
+        return view('user.ajax.index', compact('articles'));
+    }
  
 }

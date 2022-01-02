@@ -97,4 +97,7 @@ Route::post('createoption', [StaticPageController::class, 'createoption'])->name
 Route::get('serviceoption', [StaticPageController::class, 'serviceoption'])->name('serviceoption');
 Route::get('wizardoption', [StaticPageController::class, 'wizardoption'])->name('wizardoption');
 
- 
+ //load more ajax
+//  Route::get('loadmore2', [LoadMoreController::class, 'index'])->name('loadmore');
+
+Route::get('loadmore', [StaticPageController::class, 'loadmore'])->name('loadmore');
