@@ -7,6 +7,7 @@
     {{-- set value to what we search  --}}
     <input type="text" name="search" placeholder="Search (The Messy Way)" class="w-100" value="{{ request('search')}}">
 
+    {{-- Search (The Cleaner Way) --}}
 </form>
 <hr>
 
