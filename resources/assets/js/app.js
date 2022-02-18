@@ -8,6 +8,8 @@
 import Vue from 'vue';
 
 import Info from "./components/Info";
+import ToolTip from "./components/ToolTip";
+import TooltipBody from "./components/TooltipBody";
 import Les1 from "./components/learnvue2/Les1.vue";
 import Les3 from "./components/learnvue2/Les3.vue"; //les 3, 4
 import Les5 from "./components/learnvue2/Les5.vue";
@@ -34,7 +36,8 @@ Vue.component('les10', Les10);
 Vue.component('tabs', Tabs);
 Vue.component('tab', Tab);
 Vue.component('coupon', Coupon);
-
+Vue.component('tool-tip', ToolTip);
+Vue.component('tooltip-body', TooltipBody);
 
 
 

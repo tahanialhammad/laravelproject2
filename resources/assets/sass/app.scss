@@ -16,7 +16,7 @@
 @import 'partials/supportform';
 @import 'partials/chart';
 @import 'partials/sweetalert';
-
+// @import 'partials/loader';
 
 
 body{
@@ -43,65 +43,66 @@ a{text-decoration: none;transition: 0.3s;}
   //text-overflow: ellipsis;
 }
 
-.loader{
-  display: none;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  padding-top: 20%;
-  background: rgb(66, 66, 63);
-  padding-left: 40%;
-  margin: 0 auto;
-  z-index: 999;
-}
+//i use pace packag nu 
+// .loader{
+//   display: none;
+//   width: 100%;
+//   height: 100%;
+//   position: fixed;
+//   padding-top: 20%;
+//   background: rgb(66, 66, 63);
+//   padding-left: 40%;
+//   margin: 0 auto;
+//   z-index: 999;
+// }
 
-//xcore loader not work jet 
-.loader-wrapper {
-  display: n;
-    width: 100%;
-    height: 100%;
-   // display: flex;
-  //  justify-content: center;
-  //  align-items: center;
-  position: fixed;
-  padding-top: 19%;
-  padding-left: 40%;
-  margin: 0 auto;
-  z-index: 9999;
-    background-color: rgba(29, 220, 191, 0.4);
-}
+// //xcore loader not work jet 
+// .loader-wrapper {
+//   display: n;
+//     width: 100%;
+//     height: 100%;
+//    // display: flex;
+//   //  justify-content: center;
+//   //  align-items: center;
+//   position: fixed;
+//   padding-top: 19%;
+//   padding-left: 40%;
+//   margin: 0 auto;
+//   z-index: 9999;
+//     background-color: rgba(29, 220, 191, 0.4);
+// }
 
-.progress {
-    position: relative;
-    height: 5px;
-    width: 200px;
-    border: 0;
-    border-radius: 15px;
-}
+// .progress {
+//     position: relative;
+//     height: 5px;
+//     width: 200px;
+//     border: 0;
+//     border-radius: 15px;
+// }
 
-.progress .color {
-    position: absolute;
-    background-color: #ffffff;
-    width: 0px;
-    height: 5px;
-    border-radius: 15px;
-    animation: progres 4s infinite linear;    
-}
+// .progress .color {
+//     position: absolute;
+//     background-color: #ffffff;
+//     width: 0px;
+//     height: 5px;
+//     border-radius: 15px;
+//     animation: progres 4s infinite linear;    
+// }
 
-@keyframes progres {
-    0%{
-      width: 0%;
-    }
-    25%{
-        width: 50%;
-    }
-    50%{
-        width: 75%;
-    }
-    75%{
-        width: 85%;
-    }
-    100%{
-        width: 100%;
-    }
-}
+// @keyframes progres {
+//     0%{
+//       width: 0%;
+//     }
+//     25%{
+//         width: 50%;
+//     }
+//     50%{
+//         width: 75%;
+//     }
+//     75%{
+//         width: 85%;
+//     }
+//     100%{
+//         width: 100%;
+//     }
+// }

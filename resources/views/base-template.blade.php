@@ -14,6 +14,7 @@
     {{-- LiveWire css  --}}
     @livewireStyles
     {{--OR <livewire:styles /> --}}
+
 </head>
 <body>
     {{-- svg loader  --}}
@@ -46,6 +47,8 @@
     })
 
 
+//tooltip long way
+
     // let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
     // let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
     
@@ -67,6 +70,13 @@
     //     });
     // });
 
+
+//Enable Popover from Bootstrap
+
+let popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+let popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+  return new bootstrap.Popover(popoverTriggerEl)
+})
 
 
 //load more ajax
@@ -103,13 +113,13 @@ $(window).scroll(function(){
 
     </script>
 
-    {{-- loader script --}}
-    <script>
+    {{-- loader script work goed : neit nodig want ik gebruik de package nu  --}}
+    {{-- <script>
         $(function(){
             setTimeout(() => {
-               $('.loader-wrapper').fadeOut(500);
-            }, 1000);
+               $('.loader-wrapper').fadeOut(1000);
+            }, 2000);
         })
-    </script>
+    </script> --}}
 </body>
 </html>

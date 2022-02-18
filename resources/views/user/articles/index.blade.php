@@ -1,7 +1,14 @@
 @extends('user.templates.user-template')
 
 @section('content')
+{{-- Search form 1 way --}}
+<form method="GET" action="#">
+    {{-- <input type="text" name="search" placeholder="Search (The Messy Way)" class="w-100"> --}}
+    {{-- set value to what we search  --}}
+    <input type="text" name="search" placeholder="Search (The Messy Way)" class="w-100" value="{{ request('search')}}">
 
+</form>
+<hr>
 
 <livewire:load-more/>
 <hr>
