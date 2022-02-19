@@ -2,6 +2,7 @@
 
 use App\Models\Article;
 use App\Models\User;
+use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StaticPageController;
 use App\Http\Controllers\ArticlesController;
@@ -39,6 +40,7 @@ Route::get('/articles/{article}', 'App\Http\Controllers\ArticlesController@show'
 Route::get('/articles/{article}/edit', 'App\Http\Controllers\ArticlesController@edit');
 Route::put('/articles/{article}', 'App\Http\Controllers\ArticlesController@update');
 
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -49,6 +51,21 @@ Route::get(
     '/articles',
     [ArticlesController::class, 'index']
 )->name('user.articles.index');
+
+// category wildcard name == varable name
+// Route::get('/categories/{category}', function (Category $category) {
+//     return view('user.articles.index',[
+//         'articles'=> $category->articles
+//     ]);
+// });
+//to use slug attrbuit not only id in the link
+Route::get('/categories/{category:slug}', function (Category $category) {
+    return view('user.articles.index',[
+        'articles'=> $category->articles
+    ]);
+});
+
+
 
 //blog Authore
 Route::get('/authors/{authors:username}', function (user $author) {

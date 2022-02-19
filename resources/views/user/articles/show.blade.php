@@ -7,6 +7,9 @@
 <div class="container article">
     <div>
         <h2>{{ $article->title }}</h2>
+        {{-- <a href="/categories/{{ $article->category->id }}" class="bg-danger">Category: {{ $article->category->name }}</a> --}}
+
+        <a href="/categories/{{ $article->category->slug }}" class="bg-danger">Category: {{ $article->category->name }}</a>
         <span class="text-muted">Posted by 
             <a class= "bg-info" href="/authors/{{ $article->author->username }} ">
             {{ $article->user->name }} 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\Category;
 use App\Models\Tag;
 use Illuminate\Http\Request;
 
@@ -83,6 +84,7 @@ class ArticlesController extends Controller
     {
         return view('user.articles.create', [
             'tags' => Tag::all(),
+            'categories' => Category::all(),
         ]);
     }
 
@@ -92,6 +94,7 @@ class ArticlesController extends Controller
         $article->user_id = auth()->id();
         $article->save();
         $article->tags()->attach(request('tags'));
+        $article->tags()->attach(request('categories'));
         return redirect(route('user.articles.index'));
     }
 

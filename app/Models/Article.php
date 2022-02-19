@@ -55,6 +55,7 @@ class Article extends Model
 
     public function path()
     {
+        //history  of this function is from v-11, 
         return route('articles.show', $this);
     }
 
@@ -71,6 +72,13 @@ class Article extends Model
     public function tags()
     {
         return $this->belongsToMany(Tag::class)->withTimestamps();
+    }
+
+    // v-24
+    public function category()
+    {
+        //post belong to one category
+        return $this->belongsTo(Category::class);
     }
 
 }
