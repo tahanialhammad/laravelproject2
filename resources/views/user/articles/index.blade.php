@@ -1,21 +1,9 @@
 @extends('user.templates.user-template')
 
 @section('content')
-{{-- Search form 1 way --}}
-<form method="GET" action="#">
-    {{-- <input type="text" name="search" placeholder="Search (The Messy Way)" class="w-100"> --}}
-    {{-- set value to what we search  step 1, 2--}}
-       {{-- Search (The Cleaner Way) step 2-6--}}
-    <input type="text" name="search" placeholder="Search (The Messy Way)" class="w-100" value="{{ request('search')}}">
+@include('user.articles.partials.filter')
 
- 
 
-    {{--search within categoray :  https://laracasts.com/series/laravel-8-from-scratch/episodes/39 --}}
-</form>
-<hr>
-
-<livewire:load-more/>
-<hr>
 <a href="/articles/create" class="btn btn-primary">create new article</a>
 <!-- Start Article -->
 <div class="container card-group article">
@@ -34,5 +22,7 @@
     @endforeach
 </div>
 <!-- End Article -->
+
+@include('user.articles.partials.loadmore')
 
 @endsection

@@ -49,9 +49,7 @@ class Article extends Model
         // $query->when($filters['search'] ?? false, fu($query, $search) =>
         //     $query
         //     ->where('title', 'like', '%' . $search . '%')
-        //     ->orWhere('body', 'like', '%' . $search . '%')
-        // );
-
+        //     ->orWhere('body', 'like', '%' . $search . '%'));
 
         }
 
@@ -65,10 +63,10 @@ class Article extends Model
         return $this->belongsTo(User::class);
     }
 
-    // public function author()
-    // {
-    //     return $this->belongsTo(User::class, 'user_id');
-    // }
+    public function author()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 
     public function tags()
     {

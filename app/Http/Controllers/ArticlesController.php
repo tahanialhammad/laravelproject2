@@ -48,7 +48,9 @@ class ArticlesController extends Controller
    //or 
   // dd(request()->only('search'));
 
-   return view('user.articles.index', ['articles' => Article::latest()->filter(request(['search']))->get()]); //one action to handel all posts or filter posts
+   return view('user.articles.index', [
+       'articles' => Article::latest()->filter(request(['search', 'category']))->get()
+    ]); //one action to handel all posts or filter posts
 
 
     }

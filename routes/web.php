@@ -5,6 +5,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StaticPageController;
 use App\Http\Controllers\ArticlesController;
+use PharIo\Manifest\Author;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,6 +49,23 @@ Route::get(
     '/articles',
     [ArticlesController::class, 'index']
 )->name('user.articles.index');
+
+//blog Authore
+Route::get('/authors/{authors:username}', function (user $author) {
+    return view('user.articles.index',[
+        'articles'=> $author->articles
+    ]);
+});
+
+
+
+
+
+
+
+
+
+
 
 //Static Page
 Route::get(

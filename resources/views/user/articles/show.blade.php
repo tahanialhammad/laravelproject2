@@ -7,7 +7,11 @@
 <div class="container article">
     <div>
         <h2>{{ $article->title }}</h2>
-        <span class="text-muted">Posted by {{ $article->user->name }} </span>
+        <span class="text-muted">Posted by 
+            <a class= "bg-info" href="/authors/{{ $article->author->username }} ">
+            {{ $article->user->name }} 
+        </a>
+        </span>
     </div>
     <img src="{{ $article->image }}" alt="{{ $article->title }}" class="img-fluid" />
     <p>{{ $article->body }}</p>
