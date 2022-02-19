@@ -100,4 +100,8 @@ Route::get('wizardoption', [StaticPageController::class, 'wizardoption'])->name(
  //load more ajax
 //  Route::get('loadmore2', [LoadMoreController::class, 'index'])->name('loadmore');
 
+
+//bootstrap with vuejs
+Route::get('bsvuejs', [StaticPageController::class, 'bsvuejs'])->name('bsvuejs');
+
 Route::get('loadmore', [StaticPageController::class, 'loadmore'])->name('loadmore');

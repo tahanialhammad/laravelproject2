@@ -70,5 +70,11 @@ class StaticPageController extends Controller
         
         return view('user.ajax.index', compact('articles'));
     }
+
+    public function bsvuejs()
+    {
+        return view('user.bsvuejs.index'); 
+    }
+
  
 }

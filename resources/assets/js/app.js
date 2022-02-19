@@ -5,6 +5,24 @@
 
 
 
+
+//use bootstrap with vuejs
+//npm install -s bootstrap-vue
+// import Vue from 'vue'
+// import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+
+// Import Bootstrap an BootstrapVue CSS files (order is important)
+// import 'bootstrap/dist/css/bootstrap.css'
+// import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+// Make BootstrapVue available throughout your project
+// Vue.use(BootstrapVue)
+// Optionally install the BootstrapVue icon components plugin
+// Vue.use(IconsPlugin)
+
+
+
+
 import Vue from 'vue';
 
 import Info from "./components/Info";
@@ -20,10 +38,21 @@ import Les10 from "./components/learnvue2/Les10.vue";
 import Tabs from "./components/learnvue2/Tabs.vue";
 import Tab from "./components/learnvue2/Tab.vue";
 import Coupon from "./components/learnvue2/Coupon.vue";
+import bsvue from "./components/bsvue";
 
+
+
+ // tray to use tooltip van Jefry way , i chang name van import to Jtooltip to reduce duplication 
+
+import JtoolTip from 'tooltip.js';
 
 
 require('./bootstrap');
+
+
+
+
+
 
 Vue.component('info', Info);
 Vue.component('les1', Les1);
@@ -39,6 +68,7 @@ Vue.component('coupon', Coupon);
 Vue.component('tool-tip', ToolTip);
 Vue.component('tooltip-body', TooltipBody);
 
+Vue.component('bsvue', bsvue);
 
 
 // Vue.component('tabs', {
@@ -105,9 +135,28 @@ Vue.component('tooltip-body', TooltipBody);
 
 
 
+// Jefery tooltip step 3 (Option #2)
+Vue.directive('jtooltip',{
+    bind(elem, bindings){
+     //   console.log(bindings);
+
+     new Jtooltip(elem, {
+       // placement : 'top',
+       placement : bindings.arg,
+        title : bindings.value,
+       })
+
+       
+    }
+})
 
 
 
+
+// Jefery tooltip step 4 (Option #3) register tooltip template
+import Jtemptooltip from "./components/jtemptooltip";
+
+Vue.component('jtemptooltip', Jtemptooltip)
 
 
 
@@ -117,6 +166,33 @@ window.Vue = require('vue').default;
 
 const app = new Vue({
     el: '#app',
+
+    // tray to use tooltip van Jefry way
+    mounted(){
+        //select aany elemnt with data atrabuit tooltip , and loop over them 
+        document.querySelectorAll('[data-jtooltip]').forEach(elem =>{
+           // console.log(elem); // to finde the element 
+           //now we need to register tooltip by using tooltip.js this build on popper
+           //npm install tooltip.js   , and then run watch 
+           //generate tooltip in the element with som configuraytion
+           //not work jet step 1
+        //    new Jtooltip(elem, {
+        //        placement : 'top',
+        //        title : "Hardcode title of the tooltip"
+
+        //step 2
+        new Jtooltip(elem, {
+            placement : 'top',
+            title : elem.dataset.jtooltip
+
+           })
+
+
+
+           //step 3 with dedcated vue directive
+        })
+    }
+
 });
 
 

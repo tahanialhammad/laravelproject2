@@ -5026,81 +5026,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: 'Home',
-  computed: {},
   data: function data() {
-    return {};
-  },
-  methods: {
-    onOpen: function onOpen() {
-      this.$refs.popover.$emit('open');
-    },
-    onClose: function onClose() {
-      this.$refs.popover.$emit('close');
-    }
+    return {
+      title: this.$el.innerHTML
+    };
   }
 });
 
@@ -5126,6 +5056,73 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {};
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/bsvue.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/bsvue.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/jtemptooltip.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/jtemptooltip.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//import PopperTooltip from 'tooltip.js';
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: {
+    name: {}
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    document.querySelectorAll("[data-jtooltip-name=".concat(this.name, "}]")).forEach(function (elem) {
+      // new PopperTooltip(elem, {
+      //             placement : 'top',
+      //             title : "Hardcode title of the tooltip"
+      //         });
+      //step 5 slot
+      new PopperTooltip(elem, {
+        placement: 'top',
+        title: _this.$refs.tooltipbody.innerHTML,
+        html: true
+      });
+    });
   }
 });
 
@@ -5592,7 +5589,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
 /* harmony import */ var _components_Info__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/Info */ "./resources/assets/js/components/Info.vue");
 /* harmony import */ var _components_ToolTip__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/ToolTip */ "./resources/assets/js/components/ToolTip.vue");
 /* harmony import */ var _components_TooltipBody__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/TooltipBody */ "./resources/assets/js/components/TooltipBody.vue");
@@ -5606,10 +5603,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_learnvue2_Tabs_vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/learnvue2/Tabs.vue */ "./resources/assets/js/components/learnvue2/Tabs.vue");
 /* harmony import */ var _components_learnvue2_Tab_vue__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/learnvue2/Tab.vue */ "./resources/assets/js/components/learnvue2/Tab.vue");
 /* harmony import */ var _components_learnvue2_Coupon_vue__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/learnvue2/Coupon.vue */ "./resources/assets/js/components/learnvue2/Coupon.vue");
+/* harmony import */ var _components_bsvue__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/bsvue */ "./resources/assets/js/components/bsvue.vue");
+/* harmony import */ var _components_jtemptooltip__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/jtemptooltip */ "./resources/assets/js/components/jtemptooltip.vue");
 //old
 // Vue.component('scroll-link', require('./components/ScrollLink.vue').default); //Golbal in project
 // Vue.component('Info', require('./components/Info.vue').default); //Golbal in project
 // Vue.component('Icons', require('./components/Icons.vue').default); //Golbal in project
+//use bootstrap with vuejs
+//npm install -s bootstrap-vue
+// import Vue from 'vue'
+// import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+// Import Bootstrap an BootstrapVue CSS files (order is important)
+// import 'bootstrap/dist/css/bootstrap.css'
+// import 'bootstrap-vue/dist/bootstrap-vue.css'
+// Make BootstrapVue available throughout your project
+// Vue.use(BootstrapVue)
+// Optionally install the BootstrapVue icon components plugin
+// Vue.use(IconsPlugin)
 
 
 
@@ -5625,22 +5635,26 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+ // tray to use tooltip van Jefry way , i chang name van import to Jtooltip to reduce duplication 
+
+
 
 __webpack_require__(/*! ./bootstrap */ "./resources/assets/js/bootstrap.js");
 
-vue__WEBPACK_IMPORTED_MODULE_13__.default.component('info', _components_Info__WEBPACK_IMPORTED_MODULE_0__.default);
-vue__WEBPACK_IMPORTED_MODULE_13__.default.component('les1', _components_learnvue2_Les1_vue__WEBPACK_IMPORTED_MODULE_3__.default);
-vue__WEBPACK_IMPORTED_MODULE_13__.default.component('les3', _components_learnvue2_Les3_vue__WEBPACK_IMPORTED_MODULE_4__.default);
-vue__WEBPACK_IMPORTED_MODULE_13__.default.component('les5', _components_learnvue2_Les5_vue__WEBPACK_IMPORTED_MODULE_5__.default);
-vue__WEBPACK_IMPORTED_MODULE_13__.default.component('les6', _components_learnvue2_Les6_vue__WEBPACK_IMPORTED_MODULE_6__.default);
-vue__WEBPACK_IMPORTED_MODULE_13__.default.component('les7', _components_learnvue2_Les7_vue__WEBPACK_IMPORTED_MODULE_7__.default);
-vue__WEBPACK_IMPORTED_MODULE_13__.default.component('les9', _components_learnvue2_Les9_vue__WEBPACK_IMPORTED_MODULE_8__.default);
-vue__WEBPACK_IMPORTED_MODULE_13__.default.component('les10', _components_learnvue2_Les10_vue__WEBPACK_IMPORTED_MODULE_9__.default);
-vue__WEBPACK_IMPORTED_MODULE_13__.default.component('tabs', _components_learnvue2_Tabs_vue__WEBPACK_IMPORTED_MODULE_10__.default);
-vue__WEBPACK_IMPORTED_MODULE_13__.default.component('tab', _components_learnvue2_Tab_vue__WEBPACK_IMPORTED_MODULE_11__.default);
-vue__WEBPACK_IMPORTED_MODULE_13__.default.component('coupon', _components_learnvue2_Coupon_vue__WEBPACK_IMPORTED_MODULE_12__.default);
-vue__WEBPACK_IMPORTED_MODULE_13__.default.component('tool-tip', _components_ToolTip__WEBPACK_IMPORTED_MODULE_1__.default);
-vue__WEBPACK_IMPORTED_MODULE_13__.default.component('tooltip-body', _components_TooltipBody__WEBPACK_IMPORTED_MODULE_2__.default); // Vue.component('tabs', {
+vue__WEBPACK_IMPORTED_MODULE_14__.default.component('info', _components_Info__WEBPACK_IMPORTED_MODULE_0__.default);
+vue__WEBPACK_IMPORTED_MODULE_14__.default.component('les1', _components_learnvue2_Les1_vue__WEBPACK_IMPORTED_MODULE_3__.default);
+vue__WEBPACK_IMPORTED_MODULE_14__.default.component('les3', _components_learnvue2_Les3_vue__WEBPACK_IMPORTED_MODULE_4__.default);
+vue__WEBPACK_IMPORTED_MODULE_14__.default.component('les5', _components_learnvue2_Les5_vue__WEBPACK_IMPORTED_MODULE_5__.default);
+vue__WEBPACK_IMPORTED_MODULE_14__.default.component('les6', _components_learnvue2_Les6_vue__WEBPACK_IMPORTED_MODULE_6__.default);
+vue__WEBPACK_IMPORTED_MODULE_14__.default.component('les7', _components_learnvue2_Les7_vue__WEBPACK_IMPORTED_MODULE_7__.default);
+vue__WEBPACK_IMPORTED_MODULE_14__.default.component('les9', _components_learnvue2_Les9_vue__WEBPACK_IMPORTED_MODULE_8__.default);
+vue__WEBPACK_IMPORTED_MODULE_14__.default.component('les10', _components_learnvue2_Les10_vue__WEBPACK_IMPORTED_MODULE_9__.default);
+vue__WEBPACK_IMPORTED_MODULE_14__.default.component('tabs', _components_learnvue2_Tabs_vue__WEBPACK_IMPORTED_MODULE_10__.default);
+vue__WEBPACK_IMPORTED_MODULE_14__.default.component('tab', _components_learnvue2_Tab_vue__WEBPACK_IMPORTED_MODULE_11__.default);
+vue__WEBPACK_IMPORTED_MODULE_14__.default.component('coupon', _components_learnvue2_Coupon_vue__WEBPACK_IMPORTED_MODULE_12__.default);
+vue__WEBPACK_IMPORTED_MODULE_14__.default.component('tool-tip', _components_ToolTip__WEBPACK_IMPORTED_MODULE_1__.default);
+vue__WEBPACK_IMPORTED_MODULE_14__.default.component('tooltip-body', _components_TooltipBody__WEBPACK_IMPORTED_MODULE_2__.default);
+vue__WEBPACK_IMPORTED_MODULE_14__.default.component('bsvue', _components_bsvue__WEBPACK_IMPORTED_MODULE_13__.default); // Vue.component('tabs', {
 //     template: `
 //         <div>
 //             <div class="tabs">
@@ -5691,11 +5705,44 @@ vue__WEBPACK_IMPORTED_MODULE_13__.default.component('tooltip-body', _components_
 //         this.isActive = this.selected;
 //     },
 // });
+// Jefery tooltip step 3 (Option #2)
 
+vue__WEBPACK_IMPORTED_MODULE_14__.default.directive('jtooltip', {
+  bind: function bind(elem, bindings) {
+    //   console.log(bindings);
+    new Jtooltip(elem, {
+      // placement : 'top',
+      placement: bindings.arg,
+      title: bindings.value
+    });
+  }
+}); // Jefery tooltip step 4 (Option #3) register tooltip template
+
+
+vue__WEBPACK_IMPORTED_MODULE_14__.default.component('jtemptooltip', _components_jtemptooltip__WEBPACK_IMPORTED_MODULE_15__.default);
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js").default; // Vue.component('Info', require('./components/Info.vue').default); //Golbal in project
 
-var app = new vue__WEBPACK_IMPORTED_MODULE_13__.default({
-  el: '#app'
+var app = new vue__WEBPACK_IMPORTED_MODULE_14__.default({
+  el: '#app',
+  // tray to use tooltip van Jefry way
+  mounted: function mounted() {
+    //select aany elemnt with data atrabuit tooltip , and loop over them 
+    document.querySelectorAll('[data-jtooltip]').forEach(function (elem) {
+      // console.log(elem); // to finde the element 
+      //now we need to register tooltip by using tooltip.js this build on popper
+      //npm install tooltip.js   , and then run watch 
+      //generate tooltip in the element with som configuraytion
+      //not work jet step 1
+      //    new Jtooltip(elem, {
+      //        placement : 'top',
+      //        title : "Hardcode title of the tooltip"
+      //step 2
+      new Jtooltip(elem, {
+        placement: 'top',
+        title: elem.dataset.jtooltip
+      }); //step 3 with dedcated vue directive
+    });
+  }
 });
 var data = {
   message: 'without vuejs value'
@@ -40557,6 +40604,84 @@ component.options.__file = "resources/assets/js/components/TooltipBody.vue"
 
 /***/ }),
 
+/***/ "./resources/assets/js/components/bsvue.vue":
+/*!**************************************************!*\
+  !*** ./resources/assets/js/components/bsvue.vue ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony import */ var _bsvue_vue_vue_type_template_id_6bc9a58e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bsvue.vue?vue&type=template&id=6bc9a58e& */ "./resources/assets/js/components/bsvue.vue?vue&type=template&id=6bc9a58e&");
+/* harmony import */ var _bsvue_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./bsvue.vue?vue&type=script&lang=js& */ "./resources/assets/js/components/bsvue.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _bsvue_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _bsvue_vue_vue_type_template_id_6bc9a58e___WEBPACK_IMPORTED_MODULE_0__.render,
+  _bsvue_vue_vue_type_template_id_6bc9a58e___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/assets/js/components/bsvue.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/jtemptooltip.vue":
+/*!*********************************************************!*\
+  !*** ./resources/assets/js/components/jtemptooltip.vue ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony import */ var _jtemptooltip_vue_vue_type_template_id_e00edbc8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./jtemptooltip.vue?vue&type=template&id=e00edbc8& */ "./resources/assets/js/components/jtemptooltip.vue?vue&type=template&id=e00edbc8&");
+/* harmony import */ var _jtemptooltip_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./jtemptooltip.vue?vue&type=script&lang=js& */ "./resources/assets/js/components/jtemptooltip.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _jtemptooltip_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _jtemptooltip_vue_vue_type_template_id_e00edbc8___WEBPACK_IMPORTED_MODULE_0__.render,
+  _jtemptooltip_vue_vue_type_template_id_e00edbc8___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/assets/js/components/jtemptooltip.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/assets/js/components/learnvue2/Coupon.vue":
 /*!*************************************************************!*\
   !*** ./resources/assets/js/components/learnvue2/Coupon.vue ***!
@@ -40997,6 +41122,38 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/assets/js/components/bsvue.vue?vue&type=script&lang=js&":
+/*!***************************************************************************!*\
+  !*** ./resources/assets/js/components/bsvue.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_bsvue_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./bsvue.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/bsvue.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_bsvue_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/jtemptooltip.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************!*\
+  !*** ./resources/assets/js/components/jtemptooltip.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_jtemptooltip_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./jtemptooltip.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/jtemptooltip.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_jtemptooltip_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
 /***/ "./resources/assets/js/components/learnvue2/Coupon.vue?vue&type=script&lang=js&":
 /*!**************************************************************************************!*\
   !*** ./resources/assets/js/components/learnvue2/Coupon.vue?vue&type=script&lang=js& ***!
@@ -41221,6 +41378,40 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/assets/js/components/bsvue.vue?vue&type=template&id=6bc9a58e&":
+/*!*********************************************************************************!*\
+  !*** ./resources/assets/js/components/bsvue.vue?vue&type=template&id=6bc9a58e& ***!
+  \*********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => /* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_bsvue_vue_vue_type_template_id_6bc9a58e___WEBPACK_IMPORTED_MODULE_0__.render,
+/* harmony export */   "staticRenderFns": () => /* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_bsvue_vue_vue_type_template_id_6bc9a58e___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_bsvue_vue_vue_type_template_id_6bc9a58e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./bsvue.vue?vue&type=template&id=6bc9a58e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/bsvue.vue?vue&type=template&id=6bc9a58e&");
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/jtemptooltip.vue?vue&type=template&id=e00edbc8&":
+/*!****************************************************************************************!*\
+  !*** ./resources/assets/js/components/jtemptooltip.vue?vue&type=template&id=e00edbc8& ***!
+  \****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => /* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_jtemptooltip_vue_vue_type_template_id_e00edbc8___WEBPACK_IMPORTED_MODULE_0__.render,
+/* harmony export */   "staticRenderFns": () => /* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_jtemptooltip_vue_vue_type_template_id_e00edbc8___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_jtemptooltip_vue_vue_type_template_id_e00edbc8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./jtemptooltip.vue?vue&type=template&id=e00edbc8& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/jtemptooltip.vue?vue&type=template&id=e00edbc8&");
+
+
+/***/ }),
+
 /***/ "./resources/assets/js/components/learnvue2/Coupon.vue?vue&type=template&id=4389d1c8&":
 /*!********************************************************************************************!*\
   !*** ./resources/assets/js/components/learnvue2/Coupon.vue?vue&type=template&id=4389d1c8& ***!
@@ -41440,125 +41631,17 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "b-container",
-    [
-      _c(
-        "b-button",
-        {
-          directives: [
-            {
-              name: "b-popover",
-              rawName: "v-b-popover.hover.top",
-              value: "My first popover content",
-              expression: "'My first popover content'",
-              modifiers: { hover: true, top: true }
-            }
-          ],
-          attrs: { title: "Popover" }
-        },
-        [_vm._v("\n    First popover\n  ")]
-      ),
-      _vm._v(" "),
-      _c("hr"),
-      _vm._v(" "),
-      _c("b-button", { attrs: { id: "popover-target-1" } }, [
-        _vm._v("\n    Hover me - target 1\n  ")
-      ]),
-      _vm._v(" "),
-      _c(
-        "b-popover",
-        {
-          attrs: {
-            target: "popover-target-1",
-            triggers: "hover",
-            placement: "top"
-          },
-          scopedSlots: _vm._u([
-            {
-              key: "title",
-              fn: function() {
-                return [_vm._v("Popover Title")]
-              },
-              proxy: true
-            }
-          ])
-        },
-        [
-          _vm._v("\n    I am popover "),
-          _c("b", [_vm._v("component")]),
-          _vm._v(" content!\n  ")
-        ]
-      ),
-      _vm._v(" "),
-      _c("hr"),
-      _vm._v(" "),
-      _c(
-        "b-button",
-        { attrs: { id: "popover-target-2", variant: "primary" } },
-        [_vm._v("\n    Hover me - target 2\n  ")]
-      ),
-      _vm._v(" "),
-      _c(
-        "b-popover",
-        {
-          attrs: {
-            target: "popover-target-2",
-            triggers: "hover",
-            placement: "top",
-            variant: "danger"
-          },
-          scopedSlots: _vm._u([
-            {
-              key: "title",
-              fn: function() {
-                return [_vm._v("Popover Title")]
-              },
-              proxy: true
-            }
-          ])
-        },
-        [
-          _vm._v("\n    I am popover "),
-          _c("b", [_vm._v("component")]),
-          _vm._v(" content!\n  ")
-        ]
-      ),
-      _vm._v(" "),
-      _c("hr"),
-      _vm._v(" "),
-      _c(
-        "b-button",
-        { attrs: { id: "popover-button-event", variant: "primary" } },
-        [_vm._v("\n    I have a popover  \n  ")]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "p-2" },
-        [
-          _c(
-            "b-button",
-            { staticClass: "px-1 mr-2", on: { click: _vm.onOpen } },
-            [_vm._v("\n      Open\n    ")]
-          ),
-          _vm._v(" "),
-          _c("b-button", { staticClass: "px-1", on: { click: _vm.onClose } }, [
-            _vm._v("\n      Close\n    ")
-          ])
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "b-popover",
-        {
-          ref: "popover",
-          attrs: { target: "popover-button-event", title: "Popover" }
-        },
-        [_vm._v("\n  Hello "), _c("strong", [_vm._v("World!")])]
-      )
-    ],
-    1
+    "button",
+    {
+      staticClass: "btn btn-danger",
+      attrs: {
+        type: "button",
+        "data-bs-toggle": "tooltip",
+        "data-bs-html": "true",
+        title: _vm.title
+      }
+    },
+    [_vm._v("\n\n\n\n     Tooltip vueJS\n   ")]
   )
 }
 var staticRenderFns = []
@@ -41585,6 +41668,76 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [_vm._t("default")], 2)
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/bsvue.vue?vue&type=template&id=6bc9a58e&":
+/*!************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/bsvue.vue?vue&type=template&id=6bc9a58e& ***!
+  \************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => /* binding */ render,
+/* harmony export */   "staticRenderFns": () => /* binding */ staticRenderFns
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c("b-button", { attrs: { variant: "success" } }, [
+        _vm._v(" bootstrap butn")
+      ])
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/jtemptooltip.vue?vue&type=template&id=e00edbc8&":
+/*!*******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/jtemptooltip.vue?vue&type=template&id=e00edbc8& ***!
+  \*******************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => /* binding */ render,
+/* harmony export */   "staticRenderFns": () => /* binding */ staticRenderFns
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c(
+      "div",
+      {
+        directives: [
+          { name: "show", rawName: "v-show", value: false, expression: "false" }
+        ],
+        ref: "tooltipbody"
+      },
+      [_vm._t("default")],
+      2
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
