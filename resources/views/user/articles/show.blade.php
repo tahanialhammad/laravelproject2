@@ -9,9 +9,11 @@
         <h2>{{ $article->title }}</h2>
         {{-- <a href="/categories/{{ $article->category->id }}" class="bg-danger">Category: {{ $article->category->name }}</a> --}}
 
-        <a href="/categories/{{ $article->category->slug }}" class="bg-danger">Category: {{ $article->category->name }}</a>
+        <a href="/categories/{{ $article->category->slug }}" class="badge bg-secondary">Category: {{ $article->category->name }}</a>
         <span class="text-muted">Posted by 
-            <a class= "bg-info" href="/authors/{{ $article->author->username }} ">
+            <a href="/authors/{{ $article->author->id }}" class="badge bg-secondary"> {{ $article->author->name }} </a>
+            {{-- OR --}}
+            <a href="/authors/{{ $article->author->username }} ">
             {{ $article->user->name }} 
         </a>
         </span>

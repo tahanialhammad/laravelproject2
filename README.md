@@ -29,3 +29,13 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 - php artisan ui vue --auth-
 - npm install && npm run dev
 - php artisan migrate:fresh --seed
+- to use factory manula from terminal 
+php artisan tinker
+>>> App\models\User::factory()->create();
+or
+App\models\User::factory(50)->create();
+
+- the artical ,tags factory not work , so i tray to make anew one for category 
+- php artisan make:factory CategoryFactory
+-  php artisan make:model Comment -mf      to make model factory migration
+- i can use laracast style from talwind in V-31-32-33

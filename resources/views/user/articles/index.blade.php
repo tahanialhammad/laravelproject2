@@ -23,7 +23,16 @@ Psy Shell v0.10.6 (PHP 7.4.16 — cli) by Justin Hileman
 >>> --}}
 
 {{-- new rout to show all posts by category --}}
+{{-- to check relation between post and category from termina via tinker --}}
+{{-- vagrant@homestead:~/code/laravelproject2$ php artisan tinker
+Psy Shell v0.10.6 (PHP 7.4.16 — cli) by Justin Hileman
+>>> App\models\Category::first();
+.....
+>>> App\models\Category::first()->articles;
+to finde post assocceted with this category
+ --}}
 
+{{-- seedin php artisan db:seed or  --}}
 <a href="/articles/create" class="btn btn-primary">create new article</a>
 <!-- Start Article -->
 <div class="container card-group article">
@@ -34,7 +43,15 @@ Psy Shell v0.10.6 (PHP 7.4.16 — cli) by Justin Hileman
             <img src="{{ $article->image }}" class="card-img" style="height: 15rem;" alt="{{ $article->title }}">
             <div class="card-img-overlay" style="z-index: 3;">
                 <h3><a href="{{ $article->path() }}">{{ $article->title }}</a></h3>
-                <a href="" class="bg-danger">Category: {{ $article->category->name }}</a>
+    
+                <a href="" class="badge bg-secondary">Category: {{ $article->category->name }}</a>
+                <span class="text-muted">Posted by 
+                    <a href="/authors/{{ $article->author->id }}" class="badge bg-secondary"> {{ $article->author->name }} </a>
+                    {{-- OR but not work jet v-29 stop it now--}}
+                    <a href="/authors/{{ $article->author->username }} ">
+                    {{ $article->user->name }} 
+                </a>
+                </span>
                 <p class="card-text">{{ $article->excerpt }}</p>
                 <p class="card-text text-muted">Last updated {{$article->updated_at}}</p>
             </div>

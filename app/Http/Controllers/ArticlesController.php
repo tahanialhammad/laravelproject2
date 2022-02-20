@@ -15,7 +15,8 @@ class ArticlesController extends Controller
         if (request('tag')) {
             $articles = Tag::where('name', request('tag'))->firstOrFail()->articles;
         } else {
-            $articles = Article::latest()->get();
+            // $articles = Article::latest()->get();
+            $articles = Article::latest()->with('category')->get(); //to avoied lessy load laravel 8 from scratch v-26
         }
 
 //Search (The Messy Way) ; if user serch for somethig we get the search , if not we get nuu from dd
@@ -49,8 +50,14 @@ class ArticlesController extends Controller
    //or 
   // dd(request()->only('search'));
 
+
+  //categories
+
+
+
    return view('user.articles.index', [
-       'articles' => Article::latest()->filter(request(['search', 'category']))->get()
+       'articles' => Article::latest()->filter(request(['search', 'category']))->get(),
+       'categories' => Category::all(), //V-34
     ]); //one action to handel all posts or filter posts
 
 

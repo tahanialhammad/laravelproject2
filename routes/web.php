@@ -61,18 +61,31 @@ Route::get(
 //to use slug attrbuit not only id in the link
 Route::get('/categories/{category:slug}', function (Category $category) {
     return view('user.articles.index',[
-        'articles'=> $category->articles
+        'articles'=> $category->articles,
+        'cuurentCategory' => $category, // to desply cuurrent cat.
+        'categories' => Category::all(), //tempraay
     ]);
 });
 
 
 
-//blog Authore
-Route::get('/authors/{authors:username}', function (user $author) {
+//blog by Authore v-29 step 1
+Route::get('/authors/{author}', function (user $author) {
+    //dd($author);
     return view('user.articles.index',[
-        'articles'=> $author->articles
+        'articles'=> $author->articles, //load the post reten by author
+        'categories' => Category::all(), //tempraay
     ]);
 });
+
+//blog by Authore name  v-29 step 2 that need uinqe username , so we add that to user table 
+// Route::get('/authors/{author:username}', function (user $author) {
+//     //dd($author);
+//     return view('user.articles.index',[
+//         'articles'=> $author->articles //load the post reten by author
+//     ]);
+// });
+//but i dont like it becouse we need to update register form with username so i do that later
 
 
 

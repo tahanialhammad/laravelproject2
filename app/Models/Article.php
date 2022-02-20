@@ -59,12 +59,12 @@ class Article extends Model
         return route('articles.show', $this);
     }
 
-    public function user()
+    public function user() // return user_id
     {
         return $this->belongsTo(User::class);
     }
 
-    public function author()
+    public function author()  // auther_id == user_id
     {
         return $this->belongsTo(User::class, 'user_id');
     }
