@@ -12,12 +12,12 @@ class ArticlesController extends Controller
     public function index()
     {
 
-        if (request('tag')) {
-            $articles = Tag::where('name', request('tag'))->firstOrFail()->articles;
-        } else {
-            // $articles = Article::latest()->get();
-            $articles = Article::latest()->with('category')->get(); //to avoied lessy load laravel 8 from scratch v-26
-        }
+        // if (request('tag')) {
+        //     $articles = Tag::where('name', request('tag'))->firstOrFail()->articles;
+        // } else {
+        //     // $articles = Article::latest()->get();
+        //     $articles = Article::latest()->with('category')->get(); //to avoied lessy load L8FS v-26
+        // } later
 
 //Search (The Messy Way) ; if user serch for somethig we get the search , if not we get nuu from dd
 
@@ -56,8 +56,12 @@ class ArticlesController extends Controller
 
 
    return view('user.articles.index', [
-       'articles' => Article::latest()->filter(request(['search', 'category']))->get(),
-       'categories' => Category::all(), //V-34
+    //    'articles' => Article::latest()->filter(request(['search', 'category']))->get(), //LATER search within category L8FS v-39 and add to qweryscop in model
+    'articles' => Article::latest()->filter(request(['search', 'category']))->paginate(4), //pagination
+  
+    'categories' => Category::all(), //L8FS V-34
+    //    'cuurentCategory' => Category::where('slug', request('category'))->first(), //update in L8FS v-39 option 1
+        // 'cuurentCategory' => Category::firstWhere('slug', request('category')), //update in L8FS v-39 option 2
     ]); //one action to handel all posts or filter posts
 
 
@@ -91,7 +95,7 @@ class ArticlesController extends Controller
     {
         return view('user.articles.create', [
             'tags' => Tag::all(),
-            'categories' => Category::all(),
+            'categories' => Category::all(), //nog niet werk
         ]);
     }
 
@@ -101,7 +105,7 @@ class ArticlesController extends Controller
         $article->user_id = auth()->id();
         $article->save();
         $article->tags()->attach(request('tags'));
-        $article->tags()->attach(request('categories'));
+        $article->categories()->attach(request('categories')); //nog niet werk
         return redirect(route('user.articles.index'));
     }
 

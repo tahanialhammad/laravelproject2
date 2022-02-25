@@ -32,6 +32,14 @@
         @endforeach
     </select>
   </div>
+  <div class="mb-3">
+    category nog niet werk
+    <select class="form-select" aria-label="Select category" name="category[]" >
+      @foreach ($categories as $category)
+        <option value="{{ $category->id }}">{{ $category->name }}</option>
+        @endforeach
+    </select>
+  </div>
     <button type="submit" class="btn btn-primary">Verzenden</button>
   </form>
 

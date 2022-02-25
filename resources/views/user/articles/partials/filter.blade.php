@@ -3,7 +3,7 @@
     <div class="d-flex">
         @include('user.articles.partials.category')
 
-        {{-- Search form 1 way --}}
+        {{--L8FS  Search form 1 way --}}
         <form method="GET" action="#">
             {{-- <input type="text" name="search" placeholder="Search (The Messy Way)" class="w-100"> --}}
             {{-- set value to what we search  step 1, 2 --}}

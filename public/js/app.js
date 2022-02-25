@@ -5026,6 +5026,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -41638,6 +41639,7 @@ var render = function() {
         type: "button",
         "data-bs-toggle": "tooltip",
         "data-bs-html": "true",
+        "data-bs-delay": "5000",
         title: _vm.title
       }
     },

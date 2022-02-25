@@ -65,11 +65,11 @@ Route::get('/categories/{category:slug}', function (Category $category) {
         'cuurentCategory' => $category, // to desply cuurrent cat.
         'categories' => Category::all(), //tempraay
     ]);
-});
+}); //must be commit in step 3 v-39 but not wor
 
 
 
-//blog by Authore v-29 step 1
+//blog by Authore L8FS  v-29 step 1
 Route::get('/authors/{author}', function (user $author) {
     //dd($author);
     return view('user.articles.index',[
@@ -78,7 +78,7 @@ Route::get('/authors/{author}', function (user $author) {
     ]);
 });
 
-//blog by Authore name  v-29 step 2 that need uinqe username , so we add that to user table 
+//blog by Authore name L8FS v-29 step 2 that need uinqe username , so we add that to user table 
 // Route::get('/authors/{author:username}', function (user $author) {
 //     //dd($author);
 //     return view('user.articles.index',[
@@ -86,7 +86,6 @@ Route::get('/authors/{author}', function (user $author) {
 //     ]);
 // });
 //but i dont like it becouse we need to update register form with username so i do that later
-
 
 
 

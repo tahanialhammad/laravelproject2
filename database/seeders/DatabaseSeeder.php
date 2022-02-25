@@ -35,7 +35,7 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'css',
         // ]);
   
-        // Category::factory(5)->create(); //becouse ther is no factory V-28
+        // Category::factory(5)->create(); //becouse ther is no factory L8FS  V-28
         // we can use this as defauilt data
         // Category::create([
         //     'name' => 'Personal',

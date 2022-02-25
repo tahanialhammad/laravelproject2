@@ -41,34 +41,40 @@
 
    <!-- ========== START NEW XCORE :Enable Bootstrap tooltips =========== -->
 <script>
+        let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+//with delay
     // let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
     // let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-    //     return new bootstrap.Tooltip(tooltipTriggerEl)
+    //     return new bootstrap.Tooltip(tooltipTriggerEl, { delay: {show: 0, hide: 5000}})
     // })
 
 
 //tooltip long way
 
-    let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    // let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    // let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
     
-        new bootstrap.Tooltip(tooltipTriggerEl,{ trigger: 'manual' });
+    //     new bootstrap.Tooltip(tooltipTriggerEl,{ trigger: 'manual' });
     
-        $(tooltipTriggerEl).on("mouseenter", function () {
-            let _this = this;
-            $(this).tooltip("show");
-            $(".bs-tooltip-start").on("mouseleave", function () {
-                $(_this).tooltip('hide');
-            });
-        }).on("mouseleave", function () {
-            let _this = this;
-            setTimeout(function () {
-                if (!$(".bs-tooltip-start:hover").length) {
-                    $(_this).tooltip("hide");
-                }
-            }, 300);
-        });
-    });
+    //     $(tooltipTriggerEl).on("mouseenter", function () {
+    //         let _this = this;
+    //         $(this).tooltip("show");
+    //         $(".bs-tooltip-start").on("mouseleave", function () {
+    //             $(_this).tooltip('hide');
+    //         });
+    //     }).on("mouseleave", function () {
+    //         let _this = this;
+    //         setTimeout(function () {
+    //             if (!$(".bs-tooltip-start:hover").length) {
+    //                 $(_this).tooltip("hide");
+    //             }
+    //         }, 300);
+    //     });
+    // });
 
 
 //Enable Popover from Bootstrap
@@ -121,5 +127,30 @@ $(window).scroll(function(){
             }, 2000);
         })
     </script> --}}
+
+
+    {{-- Bootstrap form validation This disables the browser default feedback tooltips --}}
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+    </script>
 </body>
 </html>

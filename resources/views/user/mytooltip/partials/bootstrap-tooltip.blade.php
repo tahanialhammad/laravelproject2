@@ -27,27 +27,27 @@
 
 
         <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top"
-            data-bs-html="true" data-bs-delay="1000"
+            data-bs-html="true" data-bs-delay="1000"   data-bs-trigger="hover click "
             title="link in tootip <br/><a href='http://getbootstrap.com/apple-touch-icon.png' class='text-success'>link</a>">
-            Tooltip with link
+            Tooltip with link with click even to stay open
         </button>
 
 
         <a type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true"
-            data-bs-delay="1000"
+            data-bs-delay="5000"
             title="klik hier <a href='https://www.youtube.com/' class='text-danger'>use data template</a>"
             data-bs-template='<div class="bg-info tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner text-success"></div></div>'>
-            tooltip with template style</a>
+            tooltip with template style and dealy </a>
 
 
 
         <a type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true"
-            data-bs-delay="1000" title="klik hier <a href=" https://www.youtube.com/">use data template</a>"
+            data-bs-delay="1000" title="klik hier <a href=" https://www.youtube.com/">use data template and dealy</a>"
         >
         tooltip with xcore problem</a>
 
         <hr>
 
-        <tool-tip title="haalo xcore tool tip with bindings"></tool-tip>
+        <tool-tip title="haalo xcore tool tip with vue and delay"></tool-tip>
 
     </div>

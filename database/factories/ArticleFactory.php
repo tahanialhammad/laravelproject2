@@ -28,11 +28,11 @@ class ArticleFactory extends Factory
         return [
             'user_id'=> User::factory(),
             'category_id'=> Category::factory(),
-            'slug' => $this->faker->slug, 
-            //'tag' => $this->faker->tag, //not work
-            'title'=>$this->faker->sentence,
-            'excerpt'=>$this->faker->sentence,
-            'body'=>$this->faker->paragraph,
+            'slug' => $this->faker->slug(), 
+            'tag' => $this->faker->tag(), //not work
+            'title'=>$this->faker->sentence(),
+            'excerpt'=>$this->faker->sentence(),
+            'body'=>$this->faker->paragraph(),
             'image' => $this->faker->imageUrl(640, 480, 'room', true)
         ];
     }

@@ -2,6 +2,7 @@
   
    <button type="button" class="btn btn-danger" 
    data-bs-toggle="tooltip" data-bs-html="true" 
+    data-bs-delay="5000"
    :title="title">
 
 

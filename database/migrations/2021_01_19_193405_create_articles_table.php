@@ -15,7 +15,9 @@ class CreateArticlesTable extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->references('id')->on('users');
+            // $table->foreignId('user_id')->references('id')->on('users');
+            // if we delete user then delet post v53
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->foreignId('category_id');
             $table->string('title');
             $table->text('excerpt');
