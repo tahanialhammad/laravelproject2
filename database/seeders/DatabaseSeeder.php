@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
        User::factory(2)->create();
        \App\Models\Tag::factory(2)->create();
 
-        \App\Models\Article::factory(2)->create();
+        \App\Models\Article::factory(5)->create();
         // \App\Models\Tag::factory(5)->create([
         //     'name' => 'defalut tag'
         // ]);

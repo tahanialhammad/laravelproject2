@@ -28,8 +28,8 @@ class ArticleFactory extends Factory
         return [
             'user_id'=> User::factory(),
             'category_id'=> Category::factory(),
-            'slug' => $this->faker->slug(), 
-            'tag' => $this->faker->tag(), //not work
+            //'slug' => $this->faker->slug(), //not work
+            //'tag' => $this->faker->word(), //not work
             'title'=>$this->faker->sentence(),
             'excerpt'=>$this->faker->sentence(),
             'body'=>$this->faker->paragraph(),

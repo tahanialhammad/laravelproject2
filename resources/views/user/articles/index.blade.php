@@ -51,6 +51,7 @@ to finde post assocceted with this category
                     <a class="text-white" href="/authors/{{ $article->author->username }} ">
                     {{ $article->user->name }} 
                 </a>
+                at <span>{{ $article->created_at }}</span>
                 </span>
                 <p class="card-text">{{ $article->excerpt }}</p>
                 <p class="card-text text-muted">Last updated {{$article->updated_at}}</p>

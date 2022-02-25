@@ -31,7 +31,7 @@ class CreateCommentsTable extends Migration
            
             //if we delet post on article table then delete its comment S!
             // $table->foreign('article_id')->references('id')->on('article')->onDelete('cascade'); OR
-         //   $table->foreign('article_id')->references('id')->on('article')->cascadeOnDelete(); //then run php artisan migrate:rollback  OR S2
+         //   $table->foreign('article_id')->references('id')->on('article')->cascadeOnDelete(); //then run php artisan migrate:rollback  , php artisan migrate OR S2
 
         });
     }

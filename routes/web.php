@@ -6,6 +6,7 @@ use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StaticPageController;
 use App\Http\Controllers\ArticlesController;
+use App\Http\Controllers\CommentController;
 use PharIo\Manifest\Author;
 
 /*
@@ -68,7 +69,7 @@ Route::get('/categories/{category:slug}', function (Category $category) {
 }); //must be commit in step 3 v-39 but not wor
 
 
-
+//Search within category in V-42-43 LATER
 //blog by Authore L8FS  v-29 step 1
 Route::get('/authors/{author}', function (user $author) {
     //dd($author);
@@ -85,10 +86,11 @@ Route::get('/authors/{author}', function (user $author) {
 //         'articles'=> $author->articles //load the post reten by author
 //     ]);
 // });
-//but i dont like it becouse we need to update register form with username so i do that later
+//but i dont like it becouse i need to update register form with username so i do that later that can by update user registereation from V-45 - V-51
 
 
-
+//comment specfcly to post in url  L8FS v-56 is beter to do that in comment controller not in ARTICLECONTROLER , he use post:slug but i dont have slug so i use id also in the form
+Route::post('articles/{article:id}/comments', [CommentController::class , 'store']);
 
 
 

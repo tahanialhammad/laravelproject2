@@ -68,6 +68,15 @@ class Article extends Model
         return $this->belongsTo(User::class);
     }
 
+
+    //L8FS v-54
+    public function comments()  //post has many comment and revers in comment modal 
+    {
+        return $this->hasMany(Comment::class);
+    }
+
+
+
     public function author()  // auther_id == user_id
     {
         return $this->belongsTo(User::class, 'user_id');

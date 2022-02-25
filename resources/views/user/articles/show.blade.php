@@ -39,22 +39,7 @@
             </form>
         @endcan
 
-        {{-- comments L8FS V-52 V----}}
-        {{-- php artisan make:model Comment -mfc --}}
-        {{-- after update table : php artisan migrate --}}
-        <div  class="p-3 mb-3 border border-danger">
-            <div class="d-flex">
-                {{-- return rundom avator img --}}
-                <img class="rounded me-2"  src="https://i.pravatar.cc/100" alt="">
 
-                <div>
-                    <header><h3>noor static</h3></header>
-                    <p>posted  static: <time>8 month ago</time>
-                    </p>
-
-                    <p>Lorem ipsum d iusto facere illo? Voluptas quis odit consequatur commodi, quos sint harum?</p>
-                </div>
-            </div>
-        </div>
+        @include('user.articles.partials.comments')
     </div>
 @endsection
