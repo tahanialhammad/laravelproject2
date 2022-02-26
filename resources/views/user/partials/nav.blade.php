@@ -39,6 +39,16 @@
                 </a>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link d-flex align-items-center text-white" href="/blog">
+                    <svg id="icon-apps" class="icon icon-inverted" viewBox="0 0 11.9 11.9">
+                        <path d="M4.1 1.3v2.8H1.3V1.3h2.8M4.3 0H1C.5 0 0 .5 0 1v3.3c0 .5.5 1 1 1h3.3c.5 0 1-.5 1-1V1c0-.5-.4-1-1-1zm6.3 7.8v2.8H7.8V7.8h2.8m.3-1.3H7.5c-.5 0-1 .4-1 1v3.3c0 .6.5 1 1 1h3.3c.5 0 1-.4 1-1V7.5c.1-.5-.4-1-.9-1zm-.3-5.2v2.8H7.8V1.3h2.8m.3-1.3H7.5c-.5 0-1 .5-1 1v3.3c0 .5.5 1 1 1h3.3c.5 0 1-.5 1-1V1c.1-.5-.4-1-.9-1zM4.1 7.8v2.8H1.3V7.8h2.8m.2-1.3H1c-.5 0-1 .4-1 1v3.3c0 .6.5 1 1 1h3.3c.5 0 1-.4 1-1V7.5c0-.5-.4-1-1-1z"
+                              class="st0"/>
+                    </svg>
+                    <span class="ps-3">blog V2</span>
+                </a>
+            </li>
+
             <li class="nav-item  ">
                 <a class="nav-link  d-flex align-items-center text-white" href="">
                     <svg id="icon-rapportages" class="icon icon-inverted" viewBox="0 0 11.5 12.7">

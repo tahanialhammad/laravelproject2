@@ -95,17 +95,37 @@ class ArticlesController extends Controller
     {
         return view('user.articles.create', [
             'tags' => Tag::all(),
-            'categories' => Category::all(), //nog niet werk
+            'categories' => Category::all(), //nog niet werk, update in v-63
         ]);
     }
 
+    //update in L8FS V-63
     public function store()
     {
-        $article = new Article($this->validateArticle(['title', 'excerpt', 'body', 'image'])); //more secure
-        $article->user_id = auth()->id();
-        $article->save();
-        $article->tags()->attach(request('tags'));
-        $article->categories()->attach(request('categories')); //nog niet werk
+   //  dd(request()->all()); // to check output of the form 
+        // $article = new Article($this->validateArticle(['title', 'excerpt', 'body', 'image', 'category_id'])); //more secure
+        // $article->user_id = auth()->id();
+       
+        // $article->tags()->attach(request('tags'));
+        // $article->categories()->attach(request('categories')); //nog niet werk
+        // $article->save();
+
+
+//updae in V-63
+$attributes = request()->validate([
+    'title' => 'required',
+    'excerpt' => 'required',
+    'body' => 'required',
+    'image' =>'required',
+    'category_id' => 'required'
+   // 'category_id' => ['required', Rule::exists('categories', 'id')] // it shod be exists in categories table, ik have no rule now
+]);
+
+$attributes['user_id'] = auth()->id(); //not work
+
+dd($attributes);
+Article::create($attributes);
+
         return redirect(route('user.articles.index'));
     }
 
@@ -129,7 +149,9 @@ class ArticlesController extends Controller
             'title' => 'required',
             'excerpt' => 'required',
             'body' => 'required',
-            'image' =>'required'
+            'image' =>'required',
+            'category_id' => 'required'
+           // 'category_id' => ['required', Rule::exists('categories', 'id')] // it shod be exists in categories table, ik have no rule now
         ]);
     }
     public function destroy()

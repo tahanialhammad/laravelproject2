@@ -36,7 +36,7 @@ Route::get('/', function () {
 
 // Route::get('/articles', 'App\Http\Controllers\ArticlesController@index')->name('articles.index');
 Route::post('/articles', 'App\Http\Controllers\ArticlesController@store');
-Route::get('/articles/create', [App\Http\Controllers\ArticlesController::class, 'create'])->middleware(['auth']);
+Route::get('/articles/create', [App\Http\Controllers\ArticlesController::class, 'create'])->middleware(['auth']); // upade in L8FS <V-62></V-62>
 Route::get('/articles/{article}', 'App\Http\Controllers\ArticlesController@show')->name('articles.show');
 Route::get('/articles/{article}/edit', 'App\Http\Controllers\ArticlesController@edit');
 Route::put('/articles/{article}', 'App\Http\Controllers\ArticlesController@update');
@@ -93,7 +93,7 @@ Route::get('/authors/{author}', function (user $author) {
 Route::post('articles/{article:id}/comments', [CommentController::class , 'store']);
 
 
-
+//subscribe email, newsletter update later fron L8FS V-58,59,60,61
 
 
 
@@ -154,3 +154,23 @@ Route::get('wizardoption', [StaticPageController::class, 'wizardoption'])->name(
 Route::get('bsvuejs', [StaticPageController::class, 'bsvuejs'])->name('bsvuejs');
 
 Route::get('loadmore', [StaticPageController::class, 'loadmore'])->name('loadmore');
+
+
+
+
+//Blog V2
+Route::get('/blog', function () {
+    return view('user.blog.index');
+});
+
+
+
+
+
+
+//Voeting App
+
+Route::get('/voting', function () {
+    return view('user.votingapp.index');
+});
+

@@ -4,6 +4,7 @@
 
 <div class="container">
 <h3>Update article</h3>
+{{-- update from v-68 --}}
 
 <form method="POST" action="/articles/{{ $article->id }}">
 <!-- Cross-site request forgery -->
