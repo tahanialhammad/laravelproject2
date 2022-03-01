@@ -9,6 +9,8 @@ use App\Http\Controllers\StaticPageController;
 use App\Http\Controllers\ArticlesController;
 use App\Http\Controllers\CommentController;
 use App\Models\Post;
+use App\Notifications\News;
+use App\Notifications\NewPost;
 use PharIo\Manifest\Author;
 
 /*
@@ -23,16 +25,16 @@ use PharIo\Manifest\Author;
 */
 
 Route::get('/', function () {
-      return view('welcome',[
-          'articles'=> App\Models\Article::take(3)->latest()->get(),
+    return view('welcome', [
+        'articles' => App\Models\Article::take(3)->latest()->get(),
         //   'users' => User::all(),
         'users' => User::paginate(2),
-      ]);
-  });
+    ]);
+});
 
-  Route::get('/about', function () {
-    return view('about',[
-        'articles'=> App\Models\Article::take(3)->latest()->get()
+Route::get('/about', function () {
+    return view('about', [
+        'articles' => App\Models\Article::take(3)->latest()->get()
     ]);
 });
 
@@ -63,8 +65,8 @@ Route::get(
 // });
 //to use slug attrbuit not only id in the link
 Route::get('/categories/{category:slug}', function (Category $category) {
-    return view('user.articles.index',[
-        'articles'=> $category->articles,
+    return view('user.articles.index', [
+        'articles' => $category->articles,
         'cuurentCategory' => $category, // to desply cuurrent cat.
         'categories' => Category::all(), //tempraay
     ]);
@@ -75,8 +77,8 @@ Route::get('/categories/{category:slug}', function (Category $category) {
 //blog by Authore L8FS  v-29 step 1
 Route::get('/authors/{author}', function (user $author) {
     //dd($author);
-    return view('user.articles.index',[
-        'articles'=> $author->articles, //load the post reten by author
+    return view('user.articles.index', [
+        'articles' => $author->articles, //load the post reten by author
         'categories' => Category::all(), //tempraay
     ]);
 });
@@ -92,7 +94,7 @@ Route::get('/authors/{author}', function (user $author) {
 
 
 //comment specfcly to post in url  L8FS v-56 is beter to do that in comment controller not in ARTICLECONTROLER , he use post:slug but i dont have slug so i use id also in the form
-Route::post('articles/{article:id}/comments', [CommentController::class , 'store']);
+Route::post('articles/{article:id}/comments', [CommentController::class, 'store']);
 
 
 //subscribe email, newsletter update later fron L8FS V-58,59,60,61
@@ -148,7 +150,7 @@ Route::post('createoption', [StaticPageController::class, 'createoption'])->name
 Route::get('serviceoption', [StaticPageController::class, 'serviceoption'])->name('serviceoption');
 Route::get('wizardoption', [StaticPageController::class, 'wizardoption'])->name('wizardoption');
 
- //load more ajax
+//load more ajax
 //  Route::get('loadmore2', [LoadMoreController::class, 'index'])->name('loadmore');
 
 
@@ -162,9 +164,9 @@ Route::get('loadmore', [StaticPageController::class, 'loadmore'])->name('loadmor
 
 //Blog V2
 Route::get('/posts', function () {
-    return view('user.blog.index',[
+    return view('user.blog.index', [
         // 'posts' => Post::all(),
-        'posts' => Post::latest()->with('postcategory', 'postauthor' )->get(),
+        'posts' => Post::latest()->with('postcategory', 'postauthor')->get(),
     ]);
 });
 
@@ -178,7 +180,7 @@ Route::get('/posts', function () {
 //use post->slug L8FS v23 , finde post according to slug, 
 //Post::where('slug',$post)->first();
 Route::get('/posts/{post:slug}', function (Post $post) {
-    return view('user.blog.show',[
+    return view('user.blog.show', [
         'post' =>  $post,
     ]);
 });
@@ -191,8 +193,8 @@ Route::get('/posts/{post:slug}', function (Post $post) {
 // });
 //to use slug attrbuit not only id in the link
 Route::get('/postcategories/{postcategory:slug}', function (Postcategory $postcategory) {
-    return view('user.blog.index',[
-        'posts'=> $postcategory->posts,
+    return view('user.blog.index', [
+        'posts' => $postcategory->posts,
         'cuurentCategory' => $postcategory, // to desply cuurrent cat.
         'postcategory' => Postcategory::all(), //tempraay
     ]);
@@ -218,3 +220,29 @@ Route::get('/voting', function () {
     return view('user.votingapp.index');
 });
 
+
+
+
+//news
+//this work
+// Route::get('/news', function () {
+//     $user = User::find(1);
+
+//      User::find(1)->notify(new News);
+//     return view('user.news.index');
+// });
+
+//tray this
+Route::get('/news', function () {
+    $newpost = Post::first();
+     User::find(1)->notify(new NewPost($newpost));
+    return view('user.news.index');
+});
+
+
+//mark as read
+Route::get('/markAsRead', function () {
+
+    auth()->user()->unreadNotifications->markAsRead();
+    return redirect()->back();
+})->name('markRead');
