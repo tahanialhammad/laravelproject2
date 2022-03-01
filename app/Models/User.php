@@ -46,4 +46,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Article::class); //select * from articles where user_id = 1
     }
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class); //select * from posy where user_id = 1
+    }
 }

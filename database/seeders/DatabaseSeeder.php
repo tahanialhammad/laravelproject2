@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Category;
 use App\Models\Tag;
 use App\Models\User;
+use App\Models\Post;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -49,5 +50,10 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Hoppy',
         //     'slug' => 'hoppy'
         // ]);
+
+
+        //Blog v2
+        
+       Post::factory(5)->create();
     }
 }

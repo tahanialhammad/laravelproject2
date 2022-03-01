@@ -3,10 +3,12 @@
 use App\Models\Article;
 use App\Models\User;
 use App\Models\Category;
+use App\Models\Postcategory;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StaticPageController;
 use App\Http\Controllers\ArticlesController;
 use App\Http\Controllers\CommentController;
+use App\Models\Post;
 use PharIo\Manifest\Author;
 
 /*
@@ -159,9 +161,51 @@ Route::get('loadmore', [StaticPageController::class, 'loadmore'])->name('loadmor
 
 
 //Blog V2
-Route::get('/blog', function () {
-    return view('user.blog.index');
+Route::get('/posts', function () {
+    return view('user.blog.index',[
+        // 'posts' => Post::all(),
+        'posts' => Post::latest()->with('postcategory', 'postauthor' )->get(),
+    ]);
 });
+
+//use post->id in link
+// Route::get('/posts/{post}', function (Post $post) {
+//     return view('user.blog.show',[
+//         'post' =>  $post,
+//     ]);
+// });
+
+//use post->slug L8FS v23 , finde post according to slug, 
+//Post::where('slug',$post)->first();
+Route::get('/posts/{post:slug}', function (Post $post) {
+    return view('user.blog.show',[
+        'post' =>  $post,
+    ]);
+});
+
+// category wildcard name == varable name
+// Route::get('/postcategories/{postcategory}', function (Postcategory $postcategory) {
+//     return view('user.blog.index',[
+//         'posts'=> $postcategory->posts // grap all post belong to this category
+//     ]);
+// });
+//to use slug attrbuit not only id in the link
+Route::get('/postcategories/{postcategory:slug}', function (Postcategory $postcategory) {
+    return view('user.blog.index',[
+        'posts'=> $postcategory->posts,
+        'cuurentCategory' => $postcategory, // to desply cuurrent cat.
+        'postcategory' => Postcategory::all(), //tempraay
+    ]);
+}); //must be commit in step 3 v-39 but not wor
+
+//blog by Authore L8FS  v-29 step 1
+// Route::get('/authors/{author}', function (user $author) {
+//     //dd($author);
+//     return view('user.blog.index',[
+//         'posts'=> $author->posts, //load the post reten by author
+
+//     ]);
+// });
 
 
 

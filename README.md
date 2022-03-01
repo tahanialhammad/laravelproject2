@@ -39,3 +39,33 @@ App\models\User::factory(50)->create();
 - php artisan make:factory CategoryFactory
 -  php artisan make:model Comment -mf      to make model factory migration
 - i can use laracast style from talwind in V-31-32-33
+
+
+## BLOG V2 ##
+- php artisan make:migration create_posts_table  (plural)
+- edit table fild
+- php artisan migrate
+- php artisan make:model Post  (singler)
+- from tinker
+- php artisan tinker
+>> App\models\Post::all();
+>> App\models\Post::count();
+>> $post = new App\models\Post;
+>> $post->title = "first post";
+>>  $post->excerpt = "first post excerpt";
+>> $post->body = "first post body";
+>> $post->save();
+- check
+>> use App\models\Post;
+>> Post::first();
+>> Post::find(1); //find by id
+
+- update route 
+>> Post::create(['title' => 'second post title','excerpt' => 'second post excerpt','body' => 'second post body' ]);
+
+- L8FS :use id in post show , then use slug in URL show post , update posts table migration, then
+- php artisan migrate:fresh
+>> Post::create(['slug' =>'first-post' ,'title' => 'first post title','excerpt' => 'first post excerpt','body' => 'first post body' ]);
+- post category
+-  php artisan make:model Postcategory -m
+- php artisan migrate:fresh
