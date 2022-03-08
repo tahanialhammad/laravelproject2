@@ -4,11 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Notifications\Notifiable;
+
 
 class Comment extends Model
 {
-    use HasFactory, Notifiable;
+    use HasFactory;
    // protected $guarded = []; dont need we can go to app/providers/appservice
 
     public function article()  //comment assoseted with the post , retern post_id 

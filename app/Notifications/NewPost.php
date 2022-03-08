@@ -17,7 +17,7 @@ class NewPost extends Notification
      *
      * @return void
      */
-    protected  $newpost;
+
 
     public function __construct($body)
     {

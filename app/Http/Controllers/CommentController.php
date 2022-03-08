@@ -7,15 +7,14 @@ use App\Models\Comment;
 use App\Models\User;
 use App\Notifications\NewPost;
 use Illuminate\Http\Request;
-use Illuminate\Notifications\Notification;
 
 class CommentController extends Controller
 {
     //we accept article to make comment in it 
     public function store(Article $article, Request $request)
     {
-      //  $users = User::all();
-      $users = User::find(1);
+        $users = User::all();
+     // $users = User::find(1);
 
 
 

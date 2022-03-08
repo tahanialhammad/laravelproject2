@@ -234,8 +234,8 @@ Route::get('/voting', function () {
 
 //tray this
 Route::get('/news', function () {
-    $newpost = Post::first();
-     User::find(1)->notify(new NewPost($newpost));
+    // $newpost = Post::first();
+    //  User::find(1)->notify(new NewPost($newpost));
     return view('user.news.index');
 });
 
