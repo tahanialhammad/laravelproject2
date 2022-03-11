@@ -38,7 +38,8 @@ import Les10 from "./components/learnvue2/Les10.vue";
 import Tabs from "./components/learnvue2/Tabs.vue";
 import Tab from "./components/learnvue2/Tab.vue";
 import Coupon from "./components/learnvue2/Coupon.vue";
-import bsvue from "./components/bsvue";
+
+import Graph from "./components/Graph.vue";
 
 
 
@@ -68,7 +69,10 @@ Vue.component('coupon', Coupon);
 Vue.component('tool-tip', ToolTip);
 Vue.component('tooltip-body', TooltipBody);
 
-Vue.component('bsvue', bsvue);
+Vue.component('graph', Graph);
+
+
+
 
 
 // Vue.component('tabs', {

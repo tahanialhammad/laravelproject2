@@ -246,3 +246,11 @@ Route::get('/markAsRead', function () {
     auth()->user()->unreadNotifications->markAsRead();
     return redirect()->back();
 })->name('markRead');
+
+
+
+
+//Chart.js 
+Route::get('/chartjs', function () {
+    return view('user.chartjs.index');
+});

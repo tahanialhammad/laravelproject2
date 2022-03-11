@@ -1,6 +1,6 @@
 <template>
   <div>
- <h3>vue js component new</h3>
+ <h3>vue js component new update</h3>
   </div>
 </template>
 

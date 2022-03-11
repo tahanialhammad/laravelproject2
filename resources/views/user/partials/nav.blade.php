@@ -105,6 +105,16 @@
             </li>
 
             <li class="nav-item ">
+                <a class="nav-link d-flex align-items-center text-white" href="/chartjs">
+                    <svg id="icon-stats" class="icon icon-inverted" viewBox="0 0 11.3 12.1">
+                        <path
+                            d="M.6 12.1c-.3 0-.6-.3-.6-.6V7.6c0-.3.3-.6.6-.6s.6.3.6.6v3.9c.1.3-.2.6-.6.6zm5 0c-.3 0-.6-.3-.6-.6V4.6c0-.3.3-.6.6-.6s.6.3.6.6v6.9c.1.3-.2.6-.6.6zm5 0c-.3 0-.6-.3-.6-.6V.6c0-.3.3-.6.6-.6s.6.3.6.6v10.9c.1.3-.2.6-.6.6z" />
+                    </svg>
+                    <span class="ps-3">Chartjs</span>
+                </a>
+            </li>
+
+            <li class="nav-item ">
                 <a class="nav-link d-flex align-items-center text-white" href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />

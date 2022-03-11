@@ -69,3 +69,31 @@ App\models\User::factory(50)->create();
 - post category
 -  php artisan make:model Postcategory -m
 - php artisan migrate:fresh
+- auther v *26 relation between post and user
+- post Factories
+- php artisan make:factory PostFactory
+- php artisan make:factory PostcategoryFactory
+- update post factory
+- php artisan migrate:fresh --seed 
+- post by author
+- 
+
+<!-- - Mark as read notification
+- php artisan make:notification CommentAdded --markdown=mail.comment.added -->
+- php artisan notifications:table
+- php artisan migrate
+- php artisan make:notification News
+
+-  php artisan make:notification NewPost
+
+
+xcore
+- php artisan notifications:table
+- php artisan migrate
+- php artisan make:notification Newnews
+
+
+## Chart.js  
+- use https://www.youtube.com/watch?v=rv16bmm9TDY
+-  php artisan make:controller DashboardController (niet nodige)
+- 
