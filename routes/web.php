@@ -13,6 +13,11 @@ use App\Notifications\News;
 use App\Notifications\NewPost;
 use PharIo\Manifest\Author;
 
+
+//for chart v6 
+use App\Models\Performance;
+use Carbon\Carbon;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -250,7 +255,32 @@ Route::get('/markAsRead', function () {
 
 
 
-//Chart.js 
+//Chart.js // stuur dat to chart , simple data Laracast charting and you :V-5
 Route::get('/chartjs', function () {
-    return view('user.chartjs.index');
+//step 4
+    // $tahani=['name'=>'tahani', 'wins'=>50];
+    // $hashem=['name'=>'hashem', 'wins'=>70];
+
+    // but in real we have a collection returend from leqwent of object stap 5 , collection can convert himself toString method jason  
+    $tahani = collect(['name'=>'tahani', 'wins'=>80]);
+    $hashem = collect(['name'=>'hashem', 'wins'=>70]);
+
+
+    //V6 /Render Monthly Revenue
+    // fetch revenue by month,  hi have table with this info and mdel : Performance, table with id, revenue, new_users , users, i have writ this in redme 
+//Performance::where('created_at', '>=', Carbon::now()->firstOfYear());
+$revenue = Performance::thisYear()
+    ->selectRaw('strftime( "%m", created_at) as month , sum(revenue) as revenue') //translate given date to maonth number == 01 , 02 ... and allis that to month , and then iv me the sum voor the revenu col 
+    ->groupBy('month')
+    ->pluck('revenue', 'month') //we dont need the rest of columen so only pulj the revenue
+;
+
+// dd($revenue); //not work i have syntax error , may be its old ???? 
+
+    return view('user.chartjs.index', compact('tahani', 'hashem', 'revenue'));
 });
+
+//Chart.js 
+// Route::get('/chartjs',
+// [ArticlesController::class, 'articleperday']);
+

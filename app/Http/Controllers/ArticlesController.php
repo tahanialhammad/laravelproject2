@@ -158,4 +158,13 @@ Article::create($attributes);
     {
         //Delete the resource
     }
+    
+    //chart data
+    public function articleperday() 
+    {
+        return view('user.chartjs.index', ['articles' => Article::latest()->get()]);
+    }
+
+
+    
 }

@@ -96,4 +96,12 @@ xcore
 ## Chart.js  
 - use https://www.youtube.com/watch?v=rv16bmm9TDY
 -  php artisan make:controller DashboardController (niet nodige)
+- php artisan make:migration create_orders_table
+- php artisan make:factory OrderFactory
+- php artisan make:factory OrderItemFactory
+- from v6 https://github.com/laracasts/Render-Monthly-Revenue
+- php artisan make:migration create_performance_stats_table
+- i have wirte som data from viedo
+-  php artisan make:model Performance 
+- update model from viedio
 - 

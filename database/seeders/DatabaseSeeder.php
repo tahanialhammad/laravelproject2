@@ -55,5 +55,7 @@ class DatabaseSeeder extends Seeder
         //Blog v2
         
        Post::factory(5)->create();
+
+      //  Order::factory(5)->has(OrderItem::factory(rand(1,3)));
     }
 }

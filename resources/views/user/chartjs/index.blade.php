@@ -3,17 +3,39 @@
 @section('content')
     <div>
         <h1>Chart.js</h1>
-
         <div class="container">
-            <graph></graph>
+            {{-- stap 1 --}}
+            {{-- <graph></graph> --}}
+            {{-- in stap 2 data uiside vue from prop,in blade V-3 --}}
+            {{-- <graph :chartLables="['Aug', 'Sep', 'Nov', 'Dec']" :chartdata="[1,10,8,2]"></graph> werkt niet goed met prop lable--}}
+
+            <graph :chartdata="[1,5,8,2]"
+            chartbgcolor="pink"></graph>
+
+            <h2>anothor chart,not work
+                {{-- wee need to read all charts with the same id in canvas  --}}
+            </h2>
+            {{-- <graph :chartdata="[1,5,8,2]"
+            chartbgcolor="green"></graph> --}}
+
+            {{--stap 4/ v5 --}}
+            {{-- <graph2 :player="{{ json_encode($tahani)}}" :opponent="{{ json_encode($hashem) }}"></graph2> --}}
+    {{-- step 5 /V-5 not need json encode to toString with collection  --}}
+    <graph2 :player="{{ $tahani }}" :opponent="{{ $hashem }}"></graph2>
+
+    {{-- to make chart template more reusable , V-5  m:10 , i diint tray this --}}
+
+    {{-- v-6 with datbase query/ Render Monthly Revenue--}}
+    <graph3 :player="{{ $tahani }}" :opponent="{{ $hashem }}"></graph3>
+
         </div>
 
         <hr>
 
-        <div class="container p-5">
+        {{-- <div class="container p-5">
             <h2>simple chart js direct blade</h2>
             <canvas id="myChart"></canvas>
-        </div>
+        </div> --}}
 
     </div>
 @stop

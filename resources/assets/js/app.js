@@ -40,8 +40,8 @@ import Tab from "./components/learnvue2/Tab.vue";
 import Coupon from "./components/learnvue2/Coupon.vue";
 
 import Graph from "./components/Graph.vue";
-
-
+import Graph2 from "./components/Graph2.vue";
+import Graph3 from "./components/Graph3.vue";
 
  // tray to use tooltip van Jefry way , i chang name van import to Jtooltip to reduce duplication 
 
@@ -70,8 +70,8 @@ Vue.component('tool-tip', ToolTip);
 Vue.component('tooltip-body', TooltipBody);
 
 Vue.component('graph', Graph);
-
-
+Vue.component('graph2', Graph2);
+Vue.component('graph3', Graph3);
 
 
 
