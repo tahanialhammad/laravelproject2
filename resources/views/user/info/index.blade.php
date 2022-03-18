@@ -2,6 +2,43 @@
 
 @section('content')
 <div>
+  <h1>test, data from staticcontroller</h1>
+  {{$myuser}}
+  {{-- that giv as homeny user per manth --}}
+  {{-- <hr>
+  {{dd($monthCount) }}
+  <hr>
+  {{ dd($months)}}
+  <hr> --}}
+{{-- use graph 5  --}}
+  <graph5 :chartdata="{{ json_encode($monthCount) }}" chartbgcolor="green"></graph5>
+
+  <hr>
+  {{-- genreated in base template --}}
+   <canvas id="myChart"></canvas>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>
     <div>
         <p>php artisan make:controller StaticPageController</p>
     </div>

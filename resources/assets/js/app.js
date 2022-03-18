@@ -44,6 +44,7 @@ import Graph from "./components/Graph.vue";
 import Graph2 from "./components/Graph2.vue";
 import Graph3 from "./components/Graph3.vue";
 import Graph4 from "./components/Graph4.vue";
+import Graph5 from "./components/Graph5.vue"; //from youtube : https://www.youtube.com/watch?v=hV-JH07tjO8&t=170s
 //tray graph with parent en chield chart and you v-8
 import Parentgraph from "./components/Parentgraph.vue";
 import Childgraph from "./components/Childgraph.vue";
@@ -80,6 +81,7 @@ Vue.component('graph', Graph);
 Vue.component('graph2', Graph2);
 Vue.component('graph3', Graph3);
 Vue.component('graph4', Graph4);
+Vue.component('graph5', Graph5);
 Vue.component('parentgraph', Parentgraph);
 Vue.component('childgraph', Childgraph);
 

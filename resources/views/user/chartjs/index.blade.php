@@ -18,9 +18,12 @@
             chartbgcolor="green"></graph> --}}
 
             {{-- stap 4/ v5 --}}
+            <h1>with php</h1>
             {{-- <graph2 :player="{{ json_encode($tahani)}}" :opponent="{{ json_encode($hashem) }}"></graph2> --}}
             {{-- step 5 /V-5 not need json encode to toString with collection --}}
-            <graph2 :player="{{ $tahani }}" :opponent="{{ $hashem }}"></graph2>
+            <hr>
+            <h1>with collection</h1>
+            {{-- <graph2 :player="{{ $tahani }}" :opponent="{{ $hashem }}"></graph2> --}}
 
             {{-- to make chart template more reusable , V-5  m:10 , i diint tray this --}}
 

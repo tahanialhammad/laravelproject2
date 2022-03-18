@@ -1,6 +1,6 @@
 <template>
  <div class="mt-4">
-   <h1>test chart2 winsgraph , V-5</h1>
+   <h1>test chart2 winsgraph , V-5 nnnnnn</h1>
    <div>
      <canvas id="mychart2"></canvas>
    </div>
@@ -23,7 +23,7 @@ export default {
    generateChart() {
      let orderschart = document.getElementById('mychart2').getContext('2d');
      this.orderschart = new Chart(orderschart, {
-       type: 'bar',
+       type: 'line',
        data: {
         labels: ['Wins'],
          datasets: [
@@ -35,13 +35,13 @@ export default {
 
          {
             label:this.opponent.name, //passing lble from varable name json 
-            backgroundColor :'pink',
+            backgroundColor :'red',
             data:[this.opponent.wins],
            },
          ]
        },
 
-     }).Bar(data);
+     });
    },
  },
  mounted() {

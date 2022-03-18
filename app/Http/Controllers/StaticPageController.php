@@ -4,12 +4,29 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Article;
+use App\Models\User;
+use Carbon\Carbon;
+
 
 class StaticPageController extends Controller
 {
     public function info()
     {
-        return view('user.info.index');
+
+$myuser = User::select('id', 'created_at')->get()->groupBy(function($myuser){
+    return Carbon::parse($myuser->created_at)->format('M');
+});
+
+$months =[];
+$monthCount =[];
+
+foreach($myuser as $month => $values){
+    $months[] = $month;
+    $monthCount[]= count($values);
+}
+
+        return view('user.info.index', ['myuser' => $myuser, 'months'=>$months, 'monthCount'=>$monthCount]);
+
     }
 
     public function vuejs()

@@ -284,21 +284,21 @@ $revenue = Performance::thisYear();
     return view('user.chartjs.index', compact('tahani', 'hashem', 'revenue'));
 });
 
-// Route::get('api/revenue', function () {
+Route::get('api/revenue', function () {
 
-//     return  Performance::thisYear()
-//         ->selectRaw('strftime("%m", created_at) as month , sum(revenue) as revenue') //translate given date to maonth number == 01 , 02 ... and allis that to month , and then iv me the sum voor the revenu col 
-//         ->groupBy('month')
-//         ->pluck('revenue', 'month') //we dont need the rest of columen so only pulj the revenue
-//     ;
+    // return  Performance::thisYear()
+    //     ->selectRaw('strftime("%m", created_at) as month , sum(revenue) as revenue') //translate given date to maonth number == 01 , 02 ... and allis that to month , and then iv me the sum voor the revenu col 
+    //     ->groupBy('month')
+    //     ->pluck('revenue', 'month') //we dont need the rest of columen so only pulj the revenue
+    // ;
 
-//     //test static data // not work jet becouse of ready function with api that jeefry use it 
-//     // return [
-//     //     'tahani' => 39,
-//     //     'hashem' => 49,
-//     //     'noor'  =>29    
-//     // ]
-// });
+    //test static data // not work jet becouse of ready function with api that jeefry use it 
+    // return [
+    //     'tahani' => 39,
+    //     'hashem' => 49,
+    //     'noor'  =>29    
+    // ]
+});
 
 //for v8 
 Route::get('api/revenue', function () {

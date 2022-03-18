@@ -157,17 +157,56 @@
     </script>
 
 {{-- Chart js --}}
+{{-- <script>
+    let myChart = document.getElementById('myChart').getContext('2d');
 
+    let massPopChart = new Chart(myChart, {
+        type: 'line',
+        data: {
+            labels: ['Jan', 'Feb', 'Maart', 'april', 'mei', 'juni', 'jull', 'aug', 'sept', 'okt', 'nov', 'dec'],
+            datasets: [{
+                label: 'level',
+                data: [10, 12, 20, 22, 30, 12, 10, 5, 15, 18],
+                backgroundColor: 'gray',
+                fill: true,
+                borderWidth: 2,
+                borderColor: 'green',
+                pointBorderColor: 'white',
+                hoverBorderWidth: 4,
+                hoverBorderColor: '#000'
+            }, ]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'my chart title not work'
+            },
+            elements: {
+                line: {
+                    tension: 0.4
+                },
+                legend: {
+                    display: false
+                },
+            },
+        }
+    });
+</script> --}}
+
+{{-- chart with data json used in info about hoemany user per month : from youtube : https://www.youtube.com/watch?v=hV-JH07tjO8&t=170s --}}
     <script>
+        let _ydata =JSON.parse('{!! json_encode($months) !!}');
+        let _xdata = JSON.parse('{!! json_encode($monthCount) !!}');
+
         let myChart = document.getElementById('myChart').getContext('2d');
 
         let massPopChart = new Chart(myChart, {
             type: 'line',
             data: {
-                labels: ['Jan', 'Feb', 'Maart', 'april', 'mei', 'juni', 'jull', 'aug', 'sept', 'okt', 'nov', 'dec'],
+                labels:_ydata,
                 datasets: [{
                     label: 'level',
-                    data: [10, 12, 20, 22, 30, 12, 10, 5, 15, 18],
+                    data: _xdata,
                     backgroundColor: 'gray',
                     fill: true,
                     borderWidth: 2,
@@ -193,6 +232,7 @@
             }
         });
     </script>
+
 
 
 </body>
