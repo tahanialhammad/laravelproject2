@@ -269,15 +269,28 @@ Route::get('/chartjs', function () {
     //V6 /Render Monthly Revenue
     // fetch revenue by month,  hi have table with this info and mdel : Performance, table with id, revenue, new_users , users, i have writ this in redme 
 //Performance::where('created_at', '>=', Carbon::now()->firstOfYear());
-$revenue = Performance::thisYear()
-    ->selectRaw('strftime( "%m", created_at) as month , sum(revenue) as revenue') //translate given date to maonth number == 01 , 02 ... and allis that to month , and then iv me the sum voor the revenu col 
-    ->groupBy('month')
-    ->pluck('revenue', 'month') //we dont need the rest of columen so only pulj the revenue
-;
+$revenue = Performance::thisYear();
+// $revenue = Performance::thisYear()
+//     ->selectRaw('strftime("%m", created_at) as month , sum(revenue) as revenue') //translate given date to maonth number == 01 , 02 ... and allis that to month , and then iv me the sum voor the revenu col 
+//     ->groupBy('month')
+//     ->pluck('revenue', 'month') //we dont need the rest of columen so only pulj the revenue
+// ;
 
-// dd($revenue); //not work i have syntax error , may be its old ???? 
+// dd($revenue); //not work i have syntax error , may be its old ???? it old and no more in use , i must check whit is the new way 
+// graph need keys and value from the collection revenueu by using keys or value method that give us arryay with keys or value 
+// dd($revenue->keys()); 
+// dd($revenue->values());
 
     return view('user.chartjs.index', compact('tahani', 'hashem', 'revenue'));
+});
+
+Route::get('api/revenue', function () {
+
+    return  Performance::thisYear()
+        ->selectRaw('strftime("%m", created_at) as month , sum(revenue) as revenue') //translate given date to maonth number == 01 , 02 ... and allis that to month , and then iv me the sum voor the revenu col 
+        ->groupBy('month')
+        ->pluck('revenue', 'month') //we dont need the rest of columen so only pulj the revenue
+    ;
 });
 
 //Chart.js 

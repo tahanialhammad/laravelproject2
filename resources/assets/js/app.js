@@ -24,6 +24,7 @@
 
 
 import Vue from 'vue';
+import VueResource from 'vue-resource'; //needs for chart 4 in V7 laracast charting and you
 
 import Info from "./components/Info";
 import ToolTip from "./components/ToolTip";
@@ -42,6 +43,12 @@ import Coupon from "./components/learnvue2/Coupon.vue";
 import Graph from "./components/Graph.vue";
 import Graph2 from "./components/Graph2.vue";
 import Graph3 from "./components/Graph3.vue";
+import Graph4 from "./components/Graph4.vue";
+//tray graph with parent en chield chart and you v-8
+import Parentgraph from "./components/Parentgraph.vue";
+import Childgraph from "./components/Childgraph.vue";
+
+
 
  // tray to use tooltip van Jefry way , i chang name van import to Jtooltip to reduce duplication 
 
@@ -72,8 +79,9 @@ Vue.component('tooltip-body', TooltipBody);
 Vue.component('graph', Graph);
 Vue.component('graph2', Graph2);
 Vue.component('graph3', Graph3);
-
-
+Vue.component('graph4', Graph4);
+Vue.component('parentgraph', Parentgraph);
+Vue.component('childgraph', Childgraph);
 
 // Vue.component('tabs', {
 //     template: `
@@ -167,6 +175,9 @@ Vue.component('jtemptooltip', Jtemptooltip)
 window.Vue = require('vue').default;
 
 // Vue.component('Info', require('./components/Info.vue').default); //Golbal in project
+
+Vue.use(VueResource); //needs for chart 4 in V7 laracast charting and you
+
 
 const app = new Vue({
     el: '#app',

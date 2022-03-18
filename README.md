@@ -104,4 +104,7 @@ xcore
 - i have wirte som data from viedo
 -  php artisan make:model Performance 
 - update model from viedio
-- 
+- becouse of this old function strftime , i have synatax error , so v6 not work ,
+- now tray v7 tio send ajax: Graphs and AJAX
+- install "vue-resource": "^1.5.1",
+- npm install vue-resource --save

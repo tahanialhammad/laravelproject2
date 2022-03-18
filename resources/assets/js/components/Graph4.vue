@@ -13,7 +13,9 @@ import Chart from 'chart.js';
 
 export default {
  name: "reveneuPerMonthChart",
- props: ['keys', 'value'],
+ props: {
+   'url' : ''
+   }, //not php prop but ajax
  data() {
    return {
 //
@@ -25,17 +27,20 @@ export default {
      this.orderschart = new Chart(orderschart, {
        type: 'line',
        data: {
-        labels: this.keys, // array of keys
+     //   labels: this.keys, // array of keys, o
+         labels: object.keys(Response.data), // object of keys
          datasets: [
            {
             label:'Revenue',
             backgroundColor :'green',
-            data:this.value, //array of value 
+           // data:this.value, //array of value 
+           //data : object.value(Response.data), //of if this method not avalible , then use
+           data : object.keys(Response.data).map(key => Response.data[key] )
            },
          ]
        },
 
-     }).Bar(data);
+     }) ;
    },
  },
  mounted() {
