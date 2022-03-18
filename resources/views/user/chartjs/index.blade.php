@@ -30,7 +30,7 @@
             {{-- v7 ajax and graph wil send data --}}
             {{-- <graph4 url='api/revenue'></graph4> --}}
             {{-- v8 parent graph and chiled --}}
-            <childgraph></childgraph>
+            <childgraph url="/api/revenue" ></childgraph>
         </div>
 
         <hr>

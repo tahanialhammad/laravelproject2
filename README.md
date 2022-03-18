@@ -108,3 +108,9 @@ xcore
 - now tray v7 tio send ajax: Graphs and AJAX
 - install "vue-resource": "^1.5.1",
 - npm install vue-resource --save
+- not work becouse of the api ready function that jefery use in v7 ,
+- stopt becouse the res gaat om auth, by adding middleware to ajax request ************
+- in v8 make range of the gragp as parent: he use base graph and then inhernt child graph from parent,
+ but i cannet use this becouse he use ready function to genereat chart , and i dont know what can i use 
+
+

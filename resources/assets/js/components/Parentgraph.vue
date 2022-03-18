@@ -4,6 +4,7 @@ import Chart from 'chart.js';
 export default Vue.extend({
     template: `
         <div>
+        <h1>parent graph</h1>
             <canvas width="600" height="400" v-el:canvas></canvas>
             {{{ legend }}}
         </div>

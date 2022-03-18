@@ -271,10 +271,10 @@ Route::get('/chartjs', function () {
 //Performance::where('created_at', '>=', Carbon::now()->firstOfYear());
 $revenue = Performance::thisYear();
 // $revenue = Performance::thisYear()
-//     ->selectRaw('strftime("%m", created_at) as month , sum(revenue) as revenue') //translate given date to maonth number == 01 , 02 ... and allis that to month , and then iv me the sum voor the revenu col 
-//     ->groupBy('month')
-//     ->pluck('revenue', 'month') //we dont need the rest of columen so only pulj the revenue
-// ;
+    // ->selectRaw('strftime("%m", created_at) as month , sum(revenue) as revenue') //translate given date to maonth number == 01 , 02 ... and allis that to month , and then iv me the sum voor the revenu col 
+    // ->groupBy('month')
+    // ->pluck('revenue', 'month') //we dont need the rest of columen so only pulj the revenue
+;
 
 // dd($revenue); //not work i have syntax error , may be its old ???? it old and no more in use , i must check whit is the new way 
 // graph need keys and value from the collection revenueu by using keys or value method that give us arryay with keys or value 
@@ -284,13 +284,27 @@ $revenue = Performance::thisYear();
     return view('user.chartjs.index', compact('tahani', 'hashem', 'revenue'));
 });
 
-Route::get('api/revenue', function () {
+// Route::get('api/revenue', function () {
 
-    return  Performance::thisYear()
-        ->selectRaw('strftime("%m", created_at) as month , sum(revenue) as revenue') //translate given date to maonth number == 01 , 02 ... and allis that to month , and then iv me the sum voor the revenu col 
-        ->groupBy('month')
-        ->pluck('revenue', 'month') //we dont need the rest of columen so only pulj the revenue
-    ;
+//     return  Performance::thisYear()
+//         ->selectRaw('strftime("%m", created_at) as month , sum(revenue) as revenue') //translate given date to maonth number == 01 , 02 ... and allis that to month , and then iv me the sum voor the revenu col 
+//         ->groupBy('month')
+//         ->pluck('revenue', 'month') //we dont need the rest of columen so only pulj the revenue
+//     ;
+
+//     //test static data // not work jet becouse of ready function with api that jeefry use it 
+//     // return [
+//     //     'tahani' => 39,
+//     //     'hashem' => 49,
+//     //     'noor'  =>29    
+//     // ]
+// });
+
+//for v8 
+Route::get('api/revenue', function () {
+    return  Performance::spanningDays(30) // we need to creat that qwery scop in performance model
+    ->pluck('revenue', 'created_at');
+    
 });
 
 //Chart.js 

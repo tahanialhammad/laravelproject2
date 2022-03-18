@@ -23,8 +23,18 @@ class Performance extends Model
      * @param  Builder $query
      * @return mixed
      */
+    //from v-6
     public function scopeThisYear($query)
     {
         return $query->where('created_at', '>=', Carbon::now()->firstOfYear());
+    }
+
+    //for v-8
+    public function scopeSpanningDays($query, $days) // accept qwery builder en the rang of days
+    {
+        //we need from old to newst and give me the recod where the date within rang
+        return $query->oldest()->whereDate(
+            'created_at', '>=', Carbon::now()->subDays($days)
+        );
     }
 }

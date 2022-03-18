@@ -4,6 +4,7 @@ export default Graph.extend({
     template: `
         <div>
             <div>
+            <h1>child graph with ranag </h1>
                 <label>How Many Days?</label>
                 <select v-model="range" @change="reload">
                     <option v-for="n in 365">{{ n }}</option>
