@@ -195,8 +195,8 @@
 
 {{-- chart with data json used in info about hoemany user per month : from youtube : https://www.youtube.com/watch?v=hV-JH07tjO8&t=170s --}}
     <script>
-        let _ydata =JSON.parse('{!! json_encode($months) !!}');
-        let _xdata = JSON.parse('{!! json_encode($monthCount) !!}');
+        let _ydata =JSON.parse('{!! json_encode($months ?? '') !!}');
+        let _xdata = JSON.parse('{!! json_encode($monthCount ?? '') !!}');
 
         let myChart = document.getElementById('myChart').getContext('2d');
 

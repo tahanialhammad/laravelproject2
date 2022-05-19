@@ -113,4 +113,8 @@ xcore
 - in v8 make range of the gragp as parent: he use base graph and then inhernt child graph from parent,
  but i cannet use this becouse he use ready function to genereat chart , and i dont know what can i use 
 
-
+## contact us Mail
+- php artisan make:controller ContactController
+- php artisan make:mail ContactMail
+- make view 
+- make email template 

@@ -12,7 +12,7 @@ use App\Models\Post;
 use App\Notifications\News;
 use App\Notifications\NewPost;
 use PharIo\Manifest\Author;
-
+use App\Http\Controllers\ContactController;
 
 //for chart v6 
 use App\Models\Performance;
@@ -311,3 +311,6 @@ Route::get('api/revenue', function () {
 // Route::get('/chartjs',
 // [ArticlesController::class, 'articleperday']);
 
+//Contact Us Mail
+Route::get('/contact-us', [ContactController::class, 'contact'])->name('contactUs');
+Route::post('/contact', [ContactController::class, 'sendEmail'])->name('contact.us');
