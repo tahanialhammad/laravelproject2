@@ -33,5 +33,8 @@ class Post extends Model
             return $this->belongsTo(Postcategory::class);
         }
 
-
+        public function postauthor()  // auther_id == user_id
+        {
+            return $this->belongsTo(User::class, 'user_id');
+        }
 }

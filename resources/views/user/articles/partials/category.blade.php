@@ -25,7 +25,7 @@
 
                     {{-- update end V-39 , then word category becoum part of link not work yet LATER--}}
                     {{-- <li><a class="dropdown-item {{ isset($cuurentCategory) && $cuurentCategory->is($category) ? 'active' : '' }}"
-                        href="/?category={{ $category->slug }}">{{ $category->name }}</a></li> --}}
+                        href="/?category={{ $category->slug }}&{{ http_build_query(request()->except('category', 'page'))}}">{{ $category->name }}</a></li> --}}
         @endforeach
     </ul>
 </div>

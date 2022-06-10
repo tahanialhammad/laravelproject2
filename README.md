@@ -118,3 +118,8 @@ xcore
 - php artisan make:mail ContactMail
 - make view 
 - make email template 
+
+## Custom rest password notification 
+- php artisan make:notification CustomResetPasswordNotification 
+- copy code from [ C:\Users\tal\code\laravelproject2\vendor\laravel\framework\src\Illuminate\Auth\Notifications\ResetPassword.php ] to CustomResetPasswordNotification
+- to excuit this custom notification ,, go to User Models and copy call functiom (sendPasswordResetNotification) notification [C:\Users\tal\code\laravelproject2\vendor\laravel\framework\src\Illuminate\Auth\Passwords\CanResetPassword.php ] fron CanResetPassword

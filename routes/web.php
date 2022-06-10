@@ -75,7 +75,7 @@ Route::get('/categories/{category:slug}', function (Category $category) {
         'cuurentCategory' => $category, // to desply cuurrent cat.
         'categories' => Category::all(), //tempraay
     ]);
-}); //must be commit in step 3 v-39 but not wor
+})->name('category'); //must be commit in step 3 v-39 but not wor
 
 
 //Search within category in V-42-43 LATER

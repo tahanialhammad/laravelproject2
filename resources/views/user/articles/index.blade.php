@@ -63,9 +63,8 @@ to finde post assocceted with this category
 
 {{-- Pagination --}}
 <div>
-    @if($articles->count())
-    {{ $articles->links() }}
-@endif
+    <p class="text-danger">pagination not work in categor , check from L8FS v 39, so i disable pagination </p>
+    {{-- {{ $articles->links() }} --}}
 </div>
 <!-- End Article -->
 
