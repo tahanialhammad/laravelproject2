@@ -314,3 +314,5 @@ Route::get('api/revenue', function () {
 //Contact Us Mail
 Route::get('/contact-us', [ContactController::class, 'contact'])->name('contactUs');
 Route::post('/contact', [ContactController::class, 'sendEmail'])->name('contact.us');
+
+

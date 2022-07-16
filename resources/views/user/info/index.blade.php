@@ -158,4 +158,7 @@
   </div>
 </form>
 
+
+<hr>
+<h1>Laravel Collection Methods</h1>
 @stop
